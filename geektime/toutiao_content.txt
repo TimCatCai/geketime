@@ -1,0 +1,35 @@
+{
+    "ab_fields":null,
+    "city":"\u63ed\u9633",
+    "count":0,
+    "cur_ts":1566660909,
+    "data":null,
+    "data_head":[
+        {
+            "cell_type":79,
+            "data_head_type":"data_head_intervention",
+            "forword_search":true,
+            "query":"\u7f8e\u5973\u56fe\u7247"
+        }
+    ],
+    "has_more":0,
+    "keyword":"\u7f8e\u5973\u56fe\u7247",
+    "latency":510,
+    "log_pb":{
+        "impr_id":"2019082423350901001802922022196DD"
+    },
+    "message":"success",
+    "offset":160,
+    "pd":"synthesis",
+    "query_id":"6527570413470356744",
+    "request_id":"2019082423350901001802922022196DD",
+    "return_count":0,
+    "search_id":"2019082423350901001802922022196DD",
+    "search_type":2,
+    "show_tabs":1,
+    "tab_rank":null,
+    "tokens":[
+        "\u7f8e\u5973",
+        "\u56fe\u7247"
+    ]
+}

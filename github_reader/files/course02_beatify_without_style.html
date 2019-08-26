@@ -1,0 +1,4031 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <base href="https://time.geekbang.org/column/article/84017"/>
+  <meta charset="utf-8"/>
+  <meta content="极客时间,IT,职业教育,知识付费,二叉树,极客Live,极客搜索,互联网,前端开发,后端开发,编程语言,人工智能,区块链,技术大会,技术管理,产品,研发,测试,运维,数据库,架构,微服务,实战,技术专家,Java,iOS,Android,Linux,Go" id="metakeywords" name="keywords"/>
+  <meta content="极客时间是一款由极客邦科技倾力打造的面向IT领域的知识服务产品,旨在帮助用户提升技术认知.板块包含专栏文章、视频课程、新闻、资讯、直播、图书、商城等。内容覆盖IT从业者的全生命周期知识技能图谱,邀请左耳朵耗子、王争、杨晓峰、winter,丁奇等顶级技术和行业专家为你讲述技术本质,解读科技动态." id="metadesc" name="description"/>
+  <link href="//static001.geekbang.org/static/icon/time/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+  <link data-savepage-href="//static001.geekbang.org/static/icon/time/favicon-32x32.png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAEm0lEQVR4AbWTA5AsSRRF78vM7uHatm3btm0H1nZgbTOwtm1b37YxaFRVZr67wxh//xPlvGjUE2qECBYSpCFALrQNMFzIOJKYDQJrAICARgCwFq1EBWZtn22BcwhBx/4Vx/7E6UOZ1guAisXM0uuaVXYwK2zWXBYC+oSS+RQQ9EQE1sVRv8TfnuDkf6iZiIUYAKCSUUxelt/CbXueWXWblg72XpBmSfcCAiIwNvz0ZPz1cTCIrYB0TRCAYExhcna7C912Z0MDyG5JICVJyz2+gcDlwtcPxJ8fkVwVIW2B6tv+A+OatzYUPrU7XeJ2uQQh6/49SEclupGriP+8F75/BLk8g0KAkFGsLL2uLLkaSM4czalDIAqbBwFx4duHZIm1zEYHwic9CtAVY1iYFr66ByRa030iy23q9rpMVt0a+SoQ8CUd9Vv84m5O7Y9cJQioNlnc6ttLRQ3ILnndh8Pm4r/vccpQqEGILJdkhW3cyc9h7V0ohj5hSChW1t3Nnfw8lt2ySYAQoUYnDdJ+H9LluwUaKrtsPtN+HwsFPiLz4ha1B9/GykWZlqnaLtPm25rFm5ZgauE9fJQosd9HDKFboGFnRNg4XScOVhUNUZMS1tmby69Ln7InWSorboC199ByqVlM0YkDWZhOkQ4N2O0nEi1MY6meSsbIEGXVLanatkrC5Sgg2/QKyipbMcRmsZLFOhZnENIRSBooOzYCMTRvqi0bUVHTdqGEdXHADyzUAWi3ROarodq2hQCfgZ0DaRTs2Kh0lVADrwgKH3T6BIooSJeLo/+Lz5+Dhilq2l1iOGMCfGwRR6FlvkqpnTMNiI5NIxdZmjVLMXqqUkT7f87oIaJZEt+4gWkdjW0TA/Sp9v+CYqjKGFi7DGuXgmrnzOa1ji1GVC2KVbZElkIJk+OQb/W391m9iH7yKIZ9B1vRIc5V6y9vY/iPMA7KJkvToLBiEcbYOdOx+3CrbHUkf3sNGgEBlG9dp3UT8c1jyOWgJAAQ1vHvT/j61SJKNYCKOGx1BDUCRAc95yBLse7OXH9vJiUqCauFKXzrWqYFarMY7Ur96D4WpyoslUyK2OgArrU9s6T7HCjYZaOqAEfciNqV4FMoQQObBwVKaLvMGm57NFRafxwsvhoPu17BnptBT6LH8mvzjMdQtSRCCdCOTUi04FPZ9kistCnKdVK7jJz+OJdZrdnYA8NeSUtYdwde+DJW3laSsgQvhFBEAZJKamRFNfe5BGvv2STTtbZhWmZvyKQpkwBBr+QqUKgz/34iP70oE/ohaYStitd+wWXXgCqsg7EoF1BRieDRO3SYBRo4eTSnT9FDr4cxUjdeKFxmDYhFVsL4QfLv19jiAK6+PvrGqWqf30AVq2+skwa6R0/GYkvrihs0zaD0+1wap8nkoVJqiMfeHlfbAD5Dn1AmTBwPSN8CsKLaDPnRvXKVGf8fDQAIwZU3C8fdqWtti6w8CzdIGTdh3CwKOv6MYp37+VUz+CuB6Pp7hu2PYfVi8ClmA2XsuLGzLwBhLFwFYoAAxsEnoM6J0RHEnKARWQltZB3Fs4GGCxnHqIBgYcH/ATiCINKHDMQBAAAAAElFTkSuQmCC" rel="icon" sizes="32x32" type="image/png"/>
+  <link data-savepage-href="//static001.geekbang.org/static/icon/time/favicon-16x16.png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAB3ElEQVR4AYySM/wYTxBHZ05/xLZt20YV20n965uwL5MyVhdbVWzbtpPTznyzGzuZz93yvTVDhZjpLwMIFCB81eR53xL206/rgaqt88dqEOD5bbm4RR+fZ9tapr5fZwAXr0TGfBY4zRInwNKRXtqV75xDr26T6ofZuGgVv9cMv04PyjM3LMBvk7dO8AI8vJgvn0DxEy7b0GvQj0B6bgsenaP/S4djl3CZOqTGCh4U7mPP7FtEj25y6ab+qIVelwKvW4EtUKkm9PCG7FsC/kh6agOq8Su5elhToVZjUbiM5qkmb1CkLLccYxvl6iGNXysc6wRnmBzxW+SKqIgyy8nt+uy+wlWRie1SyR0GKzhPNPyPilSyHXJym94+Z1bP0DxRETm+CUmMopUs4DAniLqPmFoOJfKxf6XMG0kvHlhCDq/FnsXEAbUapqAPpJvBfVmszQei8zS8eYb75wF2iyxbA2FhdJqqTfo74D351cUBNHgmF6vIx9awycSPqFxdnrIANVuR5AR8vGmRzzcN8kNu2Mu/fwWa8ba5lMbaZZJ6AZn8M+OpyqdP7WlKmeqm01hA8OKeaT/ClK1hG1X1M8Y3b9909tdhh/QDVxDjbvebQADzw/MWoXf7/RNX8gYAlaVww3cvNC4AAAAASUVORK5CYII=" rel="icon" sizes="16x16" type="image/png"/>
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover" name="viewport"/>
+  <meta content="telephone=no" name="format-detection"/>
+  <title>
+   极客时间 | Java并发编程实战
+  </title>
+  <meta content="https://time.geekbang.org/column/article/84017" name="savepage-url"/>
+  <meta content="极客时间 | Java并发编程实战" name="savepage-title"/>
+  <meta content="Tue Jun 04 2019 16:42:13 GMT+0800 (中国标准时间)" name="savepage-date"/>
+  <meta content="Standard Items; Used resource loader; Retained cross-origin frames; Removed unsaved URLs; Max frame depth = 5; Max resource size = 50MB; Max resource time = 10s;" name="savepage-state"/>
+  <meta content="15.0" name="savepage-version"/>
+  <meta content="" name="savepage-comments"/>
+  <meta content="" name="savepage-resourceloader"/>
+ </head>
+ <body>
+  <div id="app">
+   <div class="_3ADRghFH_0" style="background-color: rgb(255, 255, 255);">
+    <div class="gpDqvVI7_0" style="background-color: rgb(255, 255, 255);">
+    </div>
+    <div class="_20-cXID6_0" style="opacity: 1;">
+     <div class="_3O_7qs2p_0 _2q1SuvsS_0">
+      <div>
+       <div class="_352wsGxH_0">
+       </div>
+       <div class="Wz6esVdU_0">
+        <div class="">
+        </div>
+        <div class="_1k9ecCKw_0 iconfont">
+         
+        </div>
+        <div class="_1U_jCCZU_0">
+        </div>
+        <div class="_3oCJiu8W_0">
+         <div class="_7Xrmrbox_0">
+          防止断更 请务必加首发微信：1716143665
+         </div>
+         <div class="_3lsV2-l9_0">
+         </div>
+         <div class="JjI7sqpW_0 iconfont">
+          
+         </div>
+        </div>
+       </div>
+       <div class="_1UaW_Eq1_0">
+        <div class="_1qHJ5OLn_0">
+         <div class="_2FYmyQEJ_0">
+         </div>
+         <div class="_33xQ4nNG_0">
+          关闭
+         </div>
+        </div>
+        <div class="_1y_WRr3L_0">
+         <div class="_2HnUZhdg_0 _1r7t-t9P_0">
+          讲堂
+         </div>
+         <div class="_2HnUZhdg_0">
+          客户端下载
+         </div>
+         <div class="_2HnUZhdg_0">
+          兑换中心
+         </div>
+         <div class="_2HnUZhdg_0">
+          企业版
+         </div>
+        </div>
+        <div class="_3IeMxVb7_0">
+         <div class="_2HnUZhdg_0">
+          <span class="_339_Pvt6_0 iconfont">
+           
+          </span>
+          渠道合作
+         </div>
+         <div class="_2HnUZhdg_0">
+          <span class="_339_Pvt6_0 iconfont">
+           
+          </span>
+          推荐作者
+         </div>
+        </div>
+       </div>
+      </div>
+      <!-- -->
+      <div class="_50pDbNcP_0">
+       <h1 class="vJXgmLTi_0 _2QmGFWqF_0">
+        02 | Java内存模型：看Java如何解决可见性和有序性问题
+       </h1>
+       <div class="_2LbT9q3y_0 _2QmGFWqF_0">
+        <span>
+         2019-03-02
+        </span>
+        <span>
+         王宝令（加微信：642945106 发送“赠送”领取赠送精品课程 发数字“2”获取众筹列表。）
+        </span>
+        <div class="_3FoXPaWx_0">
+         <span class="YLYfWxsg_0">
+          Java并发编程实战
+         </span>
+         <div class="nJKayDbe_0">
+          <span>
+           进入课程
+          </span>
+          <div class="_2k8p2GLU_0 iconfont">
+           
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="_3Jbcj4Iu_0 _2QmGFWqF_0">
+        <img class="_1-ZfmNK8_0" data-savepage-src="https://static001.geekbang.org/resource/image/75/ec/756c6a8e1eb77e2f56ca97d4a71f97ec.jpg" src="picture"/>
+        <center>
+         <a href="https://static001.geekbang.org/resource/image/75/ec/756c6a8e1eb77e2f56ca97d4a71f97ec.jpg">
+          图片链接
+         </a>
+        </center>
+        <div class="_2SACi4xg_0">
+         <img src="picture"/>
+         <img src="picture"/>
+         <img src="picture"/>
+         <img src="picture"/>
+        </div>
+        <!-- -->
+        <div class="_1Bg5E78Y_0 _25ls2Q2l_0">
+         <div class="_1qj_iPD7_0">
+          <h3>
+           讲述：王宝令（加微信：642945106 发送“赠送”领取赠送精品课程 发数字“2”获取众筹列表。）
+          </h3>
+          <p>
+           <span style="margin-right: 3px;">
+            时长
+           </span>
+           <span style="margin-right: 10px;">
+            14:27
+           </span>
+           <span style="margin-right: 3px;">
+            大小
+           </span>
+           <span>
+            13.24M
+           </span>
+          </p>
+         </div>
+         <!-- -->
+         <div class="_2Ha38TVL_0 MH1rcCm7_0">
+          <div class="_1iA2uC1V_0" style="background-image: /*savepage-url=https://static001.geekbang.org/resource/image/75/ec/756c6a8e1eb77e2f56ca97d4a71f97ec.jpg*/ url(data:image/jpeg;resource=6;base64,);">
+          </div>
+          <div class="_1iA2uC1V_0 _1WF5YSBJ_0">
+          </div>
+          <div class="iconfont _2Kms_g0F_0">
+           
+          </div>
+         </div>
+         <audio data-savepage-src="https://res001.geekbang.org//media/audio/4e/a9/4e47fabe747154115d55f37975b4bea9/ld/ld.m3u8" src="data:application/octet-stream;base64,I0VYVE0zVQojRVhULVgtVkVSU0lPTjozCiNFWFQtWC1UQVJHRVREVVJBVElPTjoxMAojRVhULVgtTUVESUEtU0VRVUVOQ0U6MAojRVhUSU5GOjkuOTE0OTMzLApsZC0wMDAwMS50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDAwMi50cwojRVhUSU5GOjkuOTE0OTIyLApsZC0wMDAwMy50cwojRVhUSU5GOjkuODkxNjg5LApsZC0wMDAwNC50cwojRVhUSU5GOjkuODkxNzExLApsZC0wMDAwNS50cwojRVhUSU5GOjkuOTE0OTExLApsZC0wMDAwNi50cwojRVhUSU5GOjkuODkxNzExLApsZC0wMDAwNy50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDAwOC50cwojRVhUSU5GOjkuOTE0OTExLApsZC0wMDAwOS50cwojRVhUSU5GOjkuODkxNzExLApsZC0wMDAxMC50cwojRVhUSU5GOjkuODkxNjg5LApsZC0wMDAxMS50cwojRVhUSU5GOjkuOTE0OTExLApsZC0wMDAxMi50cwojRVhUSU5GOjkuODkxNzIyLApsZC0wMDAxMy50cwojRVhUSU5GOjkuOTE0OTAwLApsZC0wMDAxNC50cwojRVhUSU5GOjkuODkxNzExLApsZC0wMDAxNS50cwojRVhUSU5GOjkuODkxNzExLApsZC0wMDAxNi50cwojRVhUSU5GOjkuOTE0OTExLApsZC0wMDAxNy50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDAxOC50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDAxOS50cwojRVhUSU5GOjkuOTE0OTExLApsZC0wMDAyMC50cwojRVhUSU5GOjkuODkxNzExLApsZC0wMDAyMS50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDAyMi50cwojRVhUSU5GOjkuOTE0OTExLApsZC0wMDAyMy50cwojRVhUSU5GOjkuODkxNzExLApsZC0wMDAyNC50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDAyNS50cwojRVhUSU5GOjkuOTE0OTExLApsZC0wMDAyNi50cwojRVhUSU5GOjkuODkxNzExLApsZC0wMDAyNy50cwojRVhUSU5GOjkuOTE0OTIyLApsZC0wMDAyOC50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDAyOS50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDAzMC50cwojRVhUSU5GOjkuOTE0OTIyLApsZC0wMDAzMS50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDAzMi50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDAzMy50cwojRVhUSU5GOjkuOTE0OTIyLApsZC0wMDAzNC50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDAzNS50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDAzNi50cwojRVhUSU5GOjkuOTE0OTExLApsZC0wMDAzNy50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDAzOC50cwojRVhUSU5GOjkuODkxNzExLApsZC0wMDAzOS50cwojRVhUSU5GOjkuOTE0OTIyLApsZC0wMDA0MC50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDA0MS50cwojRVhUSU5GOjkuOTE0OTExLApsZC0wMDA0Mi50cwojRVhUSU5GOjkuODkxNzExLApsZC0wMDA0My50cwojRVhUSU5GOjkuODkxNjg5LApsZC0wMDA0NC50cwojRVhUSU5GOjkuOTE0OTMzLApsZC0wMDA0NS50cwojRVhUSU5GOjkuODkxNjg5LApsZC0wMDA0Ni50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDA0Ny50cwojRVhUSU5GOjkuOTE0OTMzLApsZC0wMDA0OC50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDA0OS50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDA1MC50cwojRVhUSU5GOjkuOTE0OTIyLApsZC0wMDA1MS50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDA1Mi50cwojRVhUSU5GOjkuODkxNjg5LApsZC0wMDA1My50cwojRVhUSU5GOjkuOTE0OTIyLApsZC0wMDA1NC50cwojRVhUSU5GOjkuODkxNzExLApsZC0wMDA1NS50cwojRVhUSU5GOjkuOTE0OTExLApsZC0wMDA1Ni50cwojRVhUSU5GOjkuODkxNzExLApsZC0wMDA1Ny50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDA1OC50cwojRVhUSU5GOjkuOTE0OTIyLApsZC0wMDA1OS50cwojRVhUSU5GOjkuODkxNjg5LApsZC0wMDA2MC50cwojRVhUSU5GOjkuODkxNzExLApsZC0wMDA2MS50cwojRVhUSU5GOjkuOTE0OTExLApsZC0wMDA2Mi50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDA2My50cwojRVhUSU5GOjkuODkxNzExLApsZC0wMDA2NC50cwojRVhUSU5GOjkuOTE0OTIyLApsZC0wMDA2NS50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDA2Ni50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDA2Ny50cwojRVhUSU5GOjkuOTE0OTIyLApsZC0wMDA2OC50cwojRVhUSU5GOjkuODkxNjg5LApsZC0wMDA2OS50cwojRVhUSU5GOjkuOTE0OTIyLApsZC0wMDA3MC50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDA3MS50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDA3Mi50cwojRVhUSU5GOjkuOTE0OTIyLApsZC0wMDA3My50cwojRVhUSU5GOjkuODkxNzExLApsZC0wMDA3NC50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDA3NS50cwojRVhUSU5GOjkuOTE0OTIyLApsZC0wMDA3Ni50cwojRVhUSU5GOjkuODkxNjg5LApsZC0wMDA3Ny50cwojRVhUSU5GOjkuODkxNzExLApsZC0wMDA3OC50cwojRVhUSU5GOjkuOTE0OTIyLApsZC0wMDA3OS50cwojRVhUSU5GOjkuODkxNjg5LApsZC0wMDA4MC50cwojRVhUSU5GOjkuODkxNzExLApsZC0wMDA4MS50cwojRVhUSU5GOjkuOTE0OTIyLApsZC0wMDA4Mi50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDA4My50cwojRVhUSU5GOjkuOTE0OTIyLApsZC0wMDA4NC50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDA4NS50cwojRVhUSU5GOjkuODkxNzAwLApsZC0wMDA4Ni50cwojRVhUSU5GOjkuOTE0OTIyLApsZC0wMDA4Ny50cwojRVhUSU5GOjcuODk0NzY3LApsZC0wMDA4OC50cwojRVhULVgtRU5ETElTVAo=" title="02 | Java内存模型：看Java如何解决可见性和有序性问题">
+         </audio>
+        </div>
+        <div class="_3IatBmhv_0">
+         <div class="_29HP61GA_0">
+          <p>
+           上一期我们讲到在并发场景中，因可见性、原子性、有序性导致的问题常常会违背我们的直觉，从而成为并发编程的 Bug 之源。这三者在编程领域属于共性问题，所有的编程语言都会遇到，Java 在诞生之初就支持多线程，自然也有针对这三者的技术方案，而且在编程语言领域处于领先地位。理解 Java 解决并发问题的解决方案，对于理解其他语言的解决方案有触类旁通的效果。
+          </p>
+          <p>
+           那我们就先来聊聊如何解决其中的可见性和有序性导致的问题，这也就引出来了今天的主角——
+           <strong>
+            Java 内存模型
+           </strong>
+           。
+          </p>
+          <p>
+           Java 内存模型这个概念，在职场的很多面试中都会考核到，是一个热门的考点，也是一个人并发水平的具体体现。原因是当并发程序出问题时，需要一行一行地检查代码，这个时候，只有掌握 Java 内存模型，才能慧眼如炬地发现问题。
+          </p>
+          <h2>
+           什么是 Java 内存模型？
+          </h2>
+          <p>
+           你已经知道，导致可见性的原因是缓存，导致有序性的原因是编译优化，那解决可见性、有序性最直接的办法就是
+           <strong>
+            禁用缓存和编译优化
+           </strong>
+           ，但是这样问题虽然解决了，我们程序的性能可就堪忧了。
+          </p>
+          <p>
+           合理的方案应该是
+           <strong>
+            按需禁用缓存以及编译优化
+           </strong>
+           。那么，如何做到“按需禁用”呢？对于并发程序，何时禁用缓存以及编译优化只有程序员知道，那所谓“按需禁用”其实就是指按照程序员的要求来禁用。所以，为了解决可见性和有序性问题，只需要提供给程序员按需禁用缓存和编译优化的方法即可。
+          </p>
+          <!-- [[[read_end]]] -->
+          <p>
+           Java 内存模型是个很复杂的规范，可以从不同的视角来解读，站在我们这些程序员的视角，本质上可以理解为，Java 内存模型规范了 JVM 如何提供按需禁用缓存和编译优化的方法。具体来说，这些方法包括
+           <strong>
+            volatile
+           </strong>
+           、
+           <strong>
+            synchronized
+           </strong>
+           和
+           <strong>
+            final
+           </strong>
+           三个关键字，以及六项
+           <strong>
+            Happens-Before 规则
+           </strong>
+           ，这也正是本期的重点内容。
+          </p>
+          <h2>
+           使用 volatile 的困惑
+          </h2>
+          <p>
+           volatile 关键字并不是 Java 语言的特产，古老的 C 语言里也有，它最原始的意义就是禁用 CPU 缓存。
+          </p>
+          <p>
+           例如，我们声明一个 volatile 变量
+           <code>
+            volatile int x = 0
+           </code>
+           ，它表达的是：告诉编译器，对这个变量的读写，不能使用 CPU 缓存，必须从内存中读取或者写入。这个语义看上去相当明确，但是在实际使用的时候却会带来困惑。
+          </p>
+          <p>
+           例如下面的示例代码，假设线程 A 执行 writer() 方法，按照 volatile 语义，会把变量 “v=true” 写入内存；假设线程 B 执行 reader() 方法，同样按照 volatile 语义，线程 B 会从内存中读取变量 v，如果线程 B 看到 “v == true” 时，那么线程 B 看到的变量 x 是多少呢？
+          </p>
+          <p>
+           直觉上看，应该是 42，那实际应该是多少呢？这个要看 Java 的版本，如果在低于 1.5 版本上运行，x 可能是 42，也有可能是 0；如果在 1.5 以上的版本上运行，x 就是等于 42。
+          </p>
+          <pre style="position: relative;"><code><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">// 以下代码来源于【参考 1】</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">class VolatileExample {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  int x = 0;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  volatile boolean v = false;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  public void writer() {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    x = 42;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    v = true;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  }</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  public void reader() {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    if (v == true) {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">      // 这里 x 会是多少呢？</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="12"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    }</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="13"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  }</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="14"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr></tbody></table></code><div class="richcontent-pre-copy"><span class="iconfont"></span>复制代码</div></pre>
+          <p>
+           分析一下，为什么 1.5 以前的版本会出现 x = 0 的情况呢？我相信你一定想到了，变量 x 可能被 CPU 缓存而导致可见性问题。这个问题在 1.5 版本已经被圆满解决了。Java 内存模型在 1.5 版本对 volatile 语义进行了增强。怎么增强的呢？答案是一项 Happens-Before 规则。
+          </p>
+          <h2>
+           Happens-Before 规则
+          </h2>
+          <p>
+           如何理解 Happens-Before 呢？如果望文生义（很多网文也都爱按字面意思翻译成“先行发生”），那就南辕北辙了，Happens-Before 并不是说前面一个操作发生在后续操作的前面，它真正要表达的是：
+           <strong>
+            前面一个操作的结果对后续操作是可见的
+           </strong>
+           。就像有心灵感应的两个人，虽然远隔千里，一个人心之所想，另一个人都看得到。Happens-Before 规则就是要保证线程之间的这种“心灵感应”。所以比较正式的说法是：Happens-Before 约束了编译器的优化行为，虽允许编译器优化，但是要求编译器优化后一定遵守 Happens-Before 规则。
+          </p>
+          <p>
+           Happens-Before 规则应该是 Java 内存模型里面最晦涩的内容了，和程序员相关的规则一共有如下六项，都是关于可见性的。
+          </p>
+          <p>
+           恰好前面示例代码涉及到这六项规则中的前三项，为便于你理解，我也会分析上面的示例代码，来看看规则 1、2 和 3 到底该如何理解。至于其他三项，我也会结合其他例子作以说明。
+          </p>
+          <h3>
+           1. 程序的顺序性规则
+          </h3>
+          <p>
+           这条规则是指在一个线程中，按照程序顺序，前面的操作 Happens-Before 于后续的任意操作。这还是比较容易理解的，比如刚才那段示例代码，按照程序的顺序，第 6 行代码 “x = 42;” Happens-Before 于第 7 行代码 “v = true;”，这就是规则 1 的内容，也比较符合单线程里面的思维：程序前面对某个变量的修改一定是对后续操作可见的。
+          </p>
+          <p>
+           <span class="orange">
+            （为方便你查看，我将那段示例代码在这儿再呈现一遍）
+           </span>
+          </p>
+          <pre style="position: relative;"><code><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">// 以下代码来源于【参考 1】</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">class VolatileExample {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  int x = 0;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  volatile boolean v = false;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  public void writer() {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    x = 42;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    v = true;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  }</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  public void reader() {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    if (v == true) {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">      // 这里 x 会是多少呢？</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="12"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    }</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="13"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  }</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="14"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr></tbody></table></code><div class="richcontent-pre-copy"><span class="iconfont"></span>复制代码</div></pre>
+          <h3>
+           2. volatile 变量规则
+          </h3>
+          <p>
+           这条规则是指对一个 volatile 变量的写操作， Happens-Before 于后续对这个 volatile 变量的读操作。
+          </p>
+          <p>
+           这个就有点费解了，对一个 volatile 变量的写操作相对于后续对这个 volatile 变量的读操作可见，这怎么看都是禁用缓存的意思啊，貌似和 1.5 版本以前的语义没有变化啊？如果单看这个规则，的确是这样，但是如果我们关联一下规则 3，就有点不一样的感觉了。
+          </p>
+          <h3>
+           3. 传递性
+          </h3>
+          <p>
+           这条规则是指如果 A Happens-Before B，且 B Happens-Before C，那么 A Happens-Before C。
+          </p>
+          <p>
+           我们将规则 3 的传递性应用到我们的例子中，会发生什么呢？可以看下面这幅图：
+          </p>
+          <p>
+           <img alt="" data-savepage-src="https://static001.geekbang.org/resource/image/b1/e1/b1fa541e98c74bc2a033d9ac5ae7fbe1.png" src="picture"/>
+          </p>
+          <center>
+           <a href="https://static001.geekbang.org/resource/image/b1/e1/b1fa541e98c74bc2a033d9ac5ae7fbe1.png">
+            图片链接
+           </a>
+          </center>
+          <center>
+           <span class="reference">
+            示例代码中的传递性规则
+           </span>
+          </center>
+          <p>
+           从图中，我们可以看到：
+          </p>
+          <ol>
+           <li>
+            “x=42” Happens-Before 写变量 “v=true” ，这是规则 1 的内容；
+           </li>
+           <li>
+            写变量“v=true” Happens-Before 读变量 “v=true”，这是规则 2 的内容 。
+           </li>
+          </ol>
+          <p>
+           再根据这个传递性规则，我们得到结果：“x=42” Happens-Before 读变量“v=true”。这意味着什么呢？
+          </p>
+          <p>
+           如果线程 B 读到了“v=true”，那么线程 A 设置的“x=42”对线程 B 是可见的。也就是说，线程 B 能看到 “x == 42” ，有没有一种恍然大悟的感觉？这就是 1.5 版本对 volatile 语义的增强，这个增强意义重大，1.5 版本的并发工具包（java.util.concurrent）就是靠 volatile 语义来搞定可见性的，这个在后面的内容中会详细介绍。
+          </p>
+          <h3>
+           4. 管程中锁的规则
+          </h3>
+          <p>
+           这条规则是指对一个锁的解锁 Happens-Before 于后续对这个锁的加锁。
+          </p>
+          <p>
+           要理解这个规则，就首先要了解“管程指的是什么”。
+           <strong>
+            管程
+           </strong>
+           是一种通用的同步原语，在 Java 中指的就是 synchronized，synchronized 是 Java 里对管程的实现。
+          </p>
+          <p>
+           管程中的锁在 Java 里是隐式实现的，例如下面的代码，在进入同步块之前，会自动加锁，而在代码块执行完会自动释放锁，加锁以及释放锁都是编译器帮我们实现的。
+          </p>
+          <pre style="position: relative;"><code><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">synchronized (this) { // 此处自动加锁</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  // x 是共享变量, 初始值 =10</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  if (this.x &lt; 12) {</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">    this.x = 12; </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  }  </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">} // 此处自动解锁</div></td></tr></tbody></table></code><div class="richcontent-pre-copy"><span class="iconfont"></span>复制代码</div></pre>
+          <p>
+           所以结合规则 4——管程中锁的规则，可以这样理解：假设 x 的初始值是 10，线程 A 执行完代码块后 x 的值会变成 12（执行完自动释放锁），线程 B 进入代码块时，能够看到线程 A 对 x 的写操作，也就是线程 B 能够看到 x==12。这个也是符合我们直觉的，应该不难理解。
+          </p>
+          <h3>
+           5. 线程 start() 规则
+          </h3>
+          <p>
+           这条是关于线程启动的。它是指主线程 A 启动子线程 B 后，子线程 B 能够看到主线程在启动子线程 B 前的操作。
+          </p>
+          <p>
+           换句话说就是，如果线程 A 调用线程 B 的 start() 方法（即在线程 A 中启动线程 B），那么该 start() 操作 Happens-Before 于线程 B 中的任意操作。具体可参考下面示例代码。
+          </p>
+          <pre style="position: relative;"><code><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">Thread B = new Thread(()-&gt;{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  // 主线程调用 B.start() 之前</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  // 所有对共享变量的修改，此处皆可见</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  // 此例中，var==77</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">});</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">// 此处对共享变量 var 修改</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">var = 77;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">// 主线程启动子线程</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">B.start();</div></td></tr></tbody></table></code><div class="richcontent-pre-copy"><span class="iconfont"></span>复制代码</div></pre>
+          <h3>
+           6. 线程 join() 规则
+          </h3>
+          <p>
+           这条是关于线程等待的。它是指主线程 A 等待子线程 B 完成（主线程 A 通过调用子线程 B 的 join() 方法实现），当子线程 B 完成后（主线程 A 中 join() 方法返回），主线程能够看到子线程的操作。当然所谓的“看到”，指的是对
+           <strong>
+            共享变量
+           </strong>
+           的操作。
+          </p>
+          <p>
+           换句话说就是，如果在线程 A 中，调用线程 B 的 join() 并成功返回，那么线程 B 中的任意操作 Happens-Before 于该 join() 操作的返回。具体可参考下面示例代码。
+          </p>
+          <pre style="position: relative;"><code><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">Thread B = new Thread(()-&gt;{</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  // 此处对共享变量 var 修改</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  var = 66;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">});</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">// 例如此处对共享变量修改，</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">// 则这个修改结果对线程 B 可见</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">// 主线程启动子线程</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">B.start();</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">B.join()</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="10"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">// 子线程所有对共享变量的修改</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="11"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">// 在主线程调用 B.join() 之后皆可见</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="12"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">// 此例中，var==66</div></td></tr></tbody></table></code><div class="richcontent-pre-copy"><span class="iconfont"></span>复制代码</div></pre>
+          <h2>
+           被我们忽视的 final
+          </h2>
+          <p>
+           前面我们讲 volatile 为的是禁用缓存以及编译优化，我们再从另外一个方面来看，有没有办法告诉编译器优化得更好一点呢？这个可以有，就是
+           <strong>
+            final 关键字
+           </strong>
+           。
+          </p>
+          <p>
+           <strong>
+            final 修饰变量时，初衷是告诉编译器：这个变量生而不变，可以可劲儿优化。
+           </strong>
+           Java 编译器在 1.5 以前的版本的确优化得很努力，以至于都优化错了。
+          </p>
+          <p>
+           问题类似于上一期提到的利用双重检查方法创建单例，构造函数的错误重排导致线程可能看到 final 变量的值会变化。详细的案例可以参考
+           <a href="http://www.cs.umd.edu/~pugh/java/memoryModel/jsr-133-faq.html#finalWrong">
+            这个文档
+           </a>
+           。
+          </p>
+          <p>
+           当然了，在 1.5 以后 Java 内存模型对 final 类型变量的重排进行了约束。现在只要我们提供正确构造函数没有“逸出”，就不会出问题了。
+          </p>
+          <p>
+           “逸出”有点抽象，我们还是举个例子吧，在下面例子中，在构造函数里面将 this 赋值给了全局变量 global.obj，这就是“逸出”，线程通过 global.obj 读取 x 是有可能读到 0 的。因此我们一定要避免“逸出”。
+          </p>
+          <pre style="position: relative;"><code><table class="hljs-ln"><tbody><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="1"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">// 以下代码来源于【参考 1】</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="2"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">final int x;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="3"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">// 错误的构造函数</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="4"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">public FinalFieldExample() { </div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="5"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  x = 3;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="6"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  y = 4;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="7"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  // 此处就是讲 this 逸出，</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="8"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">  global.obj = this;</div></td></tr><tr><td class="hljs-ln-numbers"><div class="hljs-ln-line hljs-ln-n" data-line-number="9"></div></td><td class="hljs-ln-code"><div class="hljs-ln-line">}</div></td></tr></tbody></table></code><div class="richcontent-pre-copy"><span class="iconfont"></span>复制代码</div></pre>
+          <h2>
+           总结
+          </h2>
+          <p>
+           Java 的内存模型是并发编程领域的一次重要创新，之后 C++、C#、Golang 等高级语言都开始支持内存模型。Java 内存模型里面，最晦涩的部分就是 Happens-Before 规则了，Happens-Before 规则最初是在一篇叫做
+           <strong>
+            Time, Clocks, and the Ordering of Events in a Distributed System
+           </strong>
+           的论文中提出来的，在这篇论文中，Happens-Before 的语义是一种因果关系。在现实世界里，如果 A 事件是导致 B 事件的起因，那么 A 事件一定是先于（Happens-Before）B 事件发生的，这个就是 Happens-Before 语义的现实理解。
+          </p>
+          <p>
+           在 Java 语言里面，Happens-Before 的语义本质上是一种可见性，A Happens-Before B 意味着 A 事件对 B 事件来说是可见的，无论 A 事件和 B 事件是否发生在同一个线程里。例如 A 事件发生在线程 1 上，B 事件发生在线程 2 上，Happens-Before 规则保证线程 2 上也能看到 A 事件的发生。
+          </p>
+          <p>
+           Java 内存模型主要分为两部分，一部分面向你我这种编写并发程序的应用开发人员，另一部分是面向 JVM 的实现人员的，我们可以重点关注前者，也就是和编写并发程序相关的部分，这部分内容的核心就是 Happens-Before 规则。相信经过本章的介绍，你应该对这部分内容已经有了深入的认识。
+          </p>
+          <h2>
+           课后思考
+          </h2>
+          <p>
+           有一个共享变量 abc，在一个线程里设置了 abc 的值
+           <code>
+            abc=3
+           </code>
+           ，你思考一下，有哪些办法可以让其他线程能够看到
+           <code>
+            abc==3
+           </code>
+           ？
+          </p>
+          <p>
+           欢迎在留言区与我分享你的想法，也欢迎你在留言区记录你的思考过程。感谢阅读，如果你觉得这篇文章对你有帮助的话，也欢迎把它分享给更多的朋友。
+          </p>
+          <h2>
+           参考
+          </h2>
+          <ol>
+           <li>
+            <a href="http://www.cs.umd.edu/~pugh/java/memoryModel/jsr-133-faq.html">
+             JSR 133 (Java Memory Model) FAQ
+            </a>
+           </li>
+           <li>
+            <a href="http://ifeve.com/jmm-faq/">
+             Java 内存模型 FAQ
+            </a>
+           </li>
+           <li>
+            <a href="https://www.cs.umd.edu/~pugh/java/memoryModel/jsr133.pdf">
+             JSR-133: Java
+             <sup>
+              TM
+             </sup>
+             Memory Model and Thread Specification
+            </a>
+           </li>
+          </ol>
+          <p>
+           <img alt="" data-savepage-src="https://static001.geekbang.org/resource/image/cf/aa/cf393cd748a4f0e6451807c4b61843aa.jpg" src="picture"/>
+          </p>
+          <center>
+           <a href="https://static001.geekbang.org/resource/image/cf/aa/cf393cd748a4f0e6451807c4b61843aa.jpg">
+            图片链接
+           </a>
+          </center>
+         </div>
+        </div>
+        <!-- -->
+        <div class="_22WJb59B_0">
+         <span class="_3ODTLCec_0">
+          ©
+         </span>
+         加微信：642945106 发送“赠送”领取赠送精品课程 发数字“2”获取众筹列表。
+        </div>
+       </div>
+       <div class="_2DmyW7ex_0 _2QmGFWqF_0">
+        <div class="_1M5b-cvc_0">
+         <div class="_3l55W_ak_0">
+          上一篇
+         </div>
+         <div class="_3Ov-zF0e_0">
+          01 | 可见性、原子性和有序性问题：并发编程Bug的源头
+         </div>
+        </div>
+        <div class="_1M5b-cvc_0">
+         <div class="_3l55W_ak_0">
+          下一篇
+         </div>
+         <div class="_3Ov-zF0e_0">
+          03 | 互斥锁（上）：解决原子性问题
+         </div>
+        </div>
+       </div>
+       <div class="_1qhD3bdE_0 _2QmGFWqF_0">
+        <div class="iconfont _2-nZIZjB_0">
+          写留言
+        </div>
+        <h2>
+         <span>
+          1716143665 拼课微信
+         </span>
+         <span class="_2FC_cD1O_0">
+          (145)
+         </span>
+        </h2>
+        <ul>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             Handongyang
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            老师，还差两个规则，分别是：
+            <br/>
+            线程中断规则：对线程interrupt()方法的调用先行发生于被中断线程的代码检测到中断事件的发生，可以通过Thread.interrupted()方法检测到是否有中断发生。
+            <br/>
+            对象终结规则：一个对象的初始化完成(构造函数执行结束)先行发生于它的finalize()方法的开始。
+            <br/>
+            <br/>
+            所以，个人对于Java内存模型总结起来就是：
+            <br/>
+            1. 为什么定义Java内存模型？现代计算机体系大部是采用的对称多处理器的体系架构。每个处理器均有独立的寄存器组和缓存，多个处理器可同时执行同一进程中的不同线程，这里称为处理器的乱序执行。在Java中，不同的线程可能访问同一个共享或共享变量。如果任由编译器或处理器对这些访问进行优化的话，很有可能出现无法想象的问题，这里称为编译器的重排序。除了处理器的乱序执行、编译器的重排序，还有内存系统的重排序。因此Java语言规范引入了Java内存模型，通过定义多项规则对编译器和处理器进行限制，主要是针对可见性和有序性。
+            <br/>
+            2. 三个基本原则：原子性、可见性、有序性。
+            <br/>
+            3. Java内存模型涉及的几个关键词：锁、volatile字段、final修饰符与对象的安全发布。其中：第一是锁，锁操作是具备happens-before关系的，解锁操作happens-before之后对同一把锁的加锁操作。实际上，在解锁的时候，JVM需要强制刷新缓存，使得当前线程所修改的内存对其他线程可见。第二是volatile字段，volatile字段可以看成是一种不保证原子性的同步但保证可见性的特性，其性能往往是优于锁操作的。但是，频繁地访问 volatile字段也会出现因为不断地强制刷新缓存而影响程序的性能的问题。第三是final修饰符，final修饰的实例字段则是涉及到新建对象的发布问题。当一个对象包含final修饰的实例字段时，其他线程能够看到已经初始化的final实例字段，这是安全的。
+            <br/>
+            4. Happens-Before的7个规则：
+            <br/>
+            (1).程序次序规则：在一个线程内，按照程序代码顺序，书写在前面的操作先行发生于书写在后面的操作。准确地说，应该是控制流顺序而不是程序代码顺序，因为要考虑分支、循环等结构。
+            <br/>
+            (2).管程锁定规则：一个unlock操作先行发生于后面对同一个锁的lock操作。这里必须强调的是同一个锁，而"后面"是指时间上的先后顺序。
+            <br/>
+            (3).volatile变量规则：对一个volatile变量的写操作先行发生于后面对这个变量的读操作，这里的"后面"同样是指时间上的先后顺序。
+            <br/>
+            (4).线程启动规则：Thread对象的start()方法先行发生于此线程的每一个动作。
+            <br/>
+            (5).线程终止规则：线程中的所有操作都先行发生于对此线程的终止检测，我们可以通过Thread.join（）方法结束、Thread.isAlive（）的返回值等手段检测到线程已经终止执行。
+            <br/>
+            (6).线程中断规则：对线程interrupt()方法的调用先行发生于被中断线程的代码检测到中断事件的发生，可以通过Thread.interrupted()方法检测到是否有中断发生。
+            <br/>
+            (7).对象终结规则：一个对象的初始化完成(构造函数执行结束)先行发生于它的finalize()方法的开始。
+            <br/>
+            5. Happens-Before的1个特性：传递性。
+            <br/>
+            6. Java内存模型底层怎么实现的？主要是通过内存屏障(memory barrier)禁止重排序的，即时编译器根据具体的底层体系架构，将这些内存屏障替换成具体的 CPU 指令。对于编译器而言，内存屏障将限制它所能做的重排序优化。而对于处理器而言，内存屏障将会导致缓存的刷新操作。比如，对于volatile，编译器将在volatile字段的读写操作前后各插入一些内存屏障。
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             厉害厉害！！！
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             senekis
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <br/>
+           我思考下认为有三种方式可以实现:
+           <br/>
+           1.声明共享变量abc，并使用volatile关键字修饰abc
+           <br/>
+           2.声明共享变量abc，在synchronized关键字对abc的赋值代码块加锁，由于Happen-before管程锁的规则，可以使得后续的线程可以看到abc的值。
+           <br/>
+           3.A线程启动后，使用A.JOIN()方法来完成运行，后续线程再启动，则一定可以看到abc==3
+           <br/>
+           <br/>
+           如有错误，请给指出错误所在！谢谢大家！谢谢老师！
+           <br/>
+           <br/>
+           听课后感觉对我帮助好大，以前零碎的知识被重新系统的整理。错误的理解也得到修正，感谢老师！
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             这三种方式都正确，理解的不错！
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             Junzi
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            参考1中write()方法代码：
+            <br/>
+            x=45;  // 1
+            <br/>
+            v=true;  // 2
+            <br/>
+            这两行会不会导致指令重排？
+            <br/>
+            <br/>
+            因为volatile关键字应该只保证了变量v的可见性，happen-before第一条原则在单线程中，1与2重排并不影响结果，那应该有可能出现重排的情况，这样线程B读取到read()的时候也有可能出现x=0。还请老师解答。
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+             没有回复
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             狂战俄洛伊
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            回复tracer的问题@tracer，你说的这个问题其实就是一个happens-before原则。例如有以下代码：
+            <br/>
+            int a = 1;//代码1
+            <br/>
+            int b = 2;//代码2
+            <br/>
+            volatile int c = 3;//代码3
+            <br/>
+            int d = 4;//代码4
+            <br/>
+            int e = 5;//代码5
+            <br/>
+            编译器解释这5行代码的时候，会保证代码1和代码2会在代码3之前执行，而代码1和代码2的执行顺序则不一定（这就是重排序，在不影响执行结果的情况下，虚拟机可能会对命令重排。当然所谓的不影响执行结果，java只保证在单线程中不影响执行结果）。代码4和代码5也一定会在代码3之后执行，同理代码4和代码5的执行顺序也是不一定的。
+            <br/>
+            所以这篇文章中你说的那段代码，由于v是volatile修饰的，对v的赋值永远在对x的赋值之后。所以在reader中输出的x一定是42
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             感谢回复！
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             小和尚笨南北
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            补充一个： 在abc赋值后对一个volatile变量A进行赋值操作，然后在其他线程读取abc之前读取A的值，通过volatile的可见性和happen-before的传递性实现abc修改后对其他线程立即可见
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             这个我称为炫技！
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             Jerry银银
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            思考题的通用性表述为：如何保证一个共享变量的可见性？
+            <br/>
+            有以下方法：
+            <br/>
+            1. 保证共享变量的可见性，使用volatile关键字修饰即可
+            <br/>
+            2. 保证共享变量是private，访问变量使用set/get方法，使用synchronized对方法加锁，此种方法不仅保证了可见性，也保证了线程安全
+            <br/>
+            3. 使用原子变量，例如：AtomicInteger等
+            <br/>
+            4. 最后一种不是办法的办法：保证多个线程是「串行执行」^_^
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             很全面了!
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             发条橙子 。
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            感悟 ：
+            <br/>
+            老师用第一篇介绍了造成并发问题的由来引出了此文如果解决其中的 可见性、排序性问题 。 有了第一篇做铺垫让此篇看起来更加的流畅 。
+            <br/>
+            <br/>
+            尤其以前看书中讲解 happens-before原则只是单单把六个规则点列了出来，很难吃透。此篇文章给出详细的事例逐点分析，使得更好的去理解每个点。
+            <br/>
+            <br/>
+            例如 我之前看到的文章都说 在单线程中不会出现有序性问题 ，在多线程中会出现有序性问题。 之前很难理解单线程中没有有序性的问题是什么原因， 原来是happens-before第一条规则限制住了编译器的优化
+            <br/>
+            <br/>
+            问题：
+            <br/>
+            第一个例子中添加了 volatile 关键字， 如果例子中 ， v变量没有使用volatile ，那么x会是什么呢 ？？
+            <br/>
+            答案： 42
+            <br/>
+            <br/>
+            我的思考是， 没有了volatile那么规则二就不满足 ， 但是规则一和规则三还是满足 ，虽然 writer()方法修改 v不能让其他立即可见，但是如果是循环调用reader()方法 ，等到可见到 v == true，根据第一条原则 ， x happens-before v ，所以能读到 x=42
+            <br/>
+            <br/>
+            老师请问我的判断正确么？
+            <br/>
+            <br/>
+            <br/>
+            思考题 ：
+            <br/>
+            <br/>
+            一个共享变量在一个线程中修改让另其他线程可见， 那就是解决可见性（缓存）的问题 , happens-before的规则就是用于对可见性进行约束的
+            <br/>
+            <br/>
+            按照老师课中所讲 ：
+            <br/>
+            思考如下：
+            <br/>
+            <br/>
+            1. 第一条规则同线程中编译会保证顺序性 ， 和问题不符合
+            <br/>
+            <br/>
+            2. 第二条规则 ， 使用volatile关键字 ， 这个关键字可以让其他线程写之前先读最新的值，所以保证读到的是最新的值 ，可行
+            <br/>
+            <br/>
+            3. 第三条规则 ，传递性， 和问题不符
+            <br/>
+            <br/>
+            4. 第四条规则， 使用管程，由于是访问共享变量，如果是在syn中修改值只能保证当前线程下一次进入syn可以看见最新的值，其他线程直接访问还可能不是最新值 ， 不行
+            <br/>
+            <br/>
+            5. 第五条规则 ， 如果前提是其他线程都在 主线程修改abc变量后 start()，则可见
+            <br/>
+            <br/>
+            6. 第六条规则 ，如果前提是其他线程等 修改abc变量线程 join()执行，则可见
+            <br/>
+            <br/>
+            7.   Final关键字， 由于final关键字表示已经定义了常量，任意线程都不可以修改， 不可用
+            <br/>
+            <br/>
+            综上总结 ：
+            <br/>
+            <br/>
+            使用2 添加volatile可行 。在符合某些场景下时，56可让其他线程可见
+            <br/>
+            <br/>
+            <br/>
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             你分析的比我还要好！
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             tracer
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            我明白了，写先于读指的是不会因为cpu缓存，导致a线程已经写了，但是b线程没读到的情况。我错误理解成了b要读，一定要等a写完才行
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             终于理解了！
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             李
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            老师，第一章里提到程序中x=5；x=6可能被重排。可是今天第一个规则里提到，同一个线程里，是顺序的。这两个不就矛盾了吗？
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             可以重排，但是要保证符合Happens-Before规则，Happens-Before规则关注的是可见性，
+             <br/>
+             x=5;
+             <br/>
+             y=6;
+             <br/>
+             z=x+y;
+             <br/>
+             上面的代码重排成这样：
+             <br/>
+             y=6;
+             <br/>
+             x=5;
+             <br/>
+             z=x+y;
+             <br/>
+             也是可以的。
+             <br/>
+             <br/>
+             所谓顺序，指的是你可以用顺序的方式推演程序的执行，但是程序的执行不一定是完全顺序的。编译器保证结果一定 == 顺序方式推演的结果
+             <br/>
+             <br/>
+             这几条规则，都是告诉你，可以按照这个规则推演程序的执行。但是编译怎么优化，那就百花齐放了。
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             WL
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            想问一下老师最后关于逸出的例子，是因为有可能通过global.obj 可能访问到还没有初始化的this对象吗，但是将this赋值给global.obj不也是初始化时才赋值的吗，这部分不太理解，请老师指点一下
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             有可能通过global.obj 可能访问到还没有初始化的this对象
+             <br/>
+             将this赋值给global.obj时，this还没有初始化完，this还没有初始化完，this还没有初始化完。
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             小麦
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            @发条橙子 ...
+            <br/>
+            有问题吧，我是这样理解的，第一条规则是串行语义，在单线程的场景下，优化后的结果会与顺序执行一致，但是不代表对x的写操作会比对v的写先执行，所以多线程下会出现问题。加volatile关键字后，volatile变量在写操作之后会插入一个store屏障（Store屏障，是x86的”sfence“指令，强制所有在store屏障指令之前的store指令，都在该store屏障指令执行之前被执行，并把store缓冲区的数据都刷到CPU缓存。这会使得程序状态对其它CPU可见，这样其它CPU可以根据需要介入。--并发编程网），所以禁止了重排序，这才保证了对x的写操作会比对v的写先执行，然后再根据volatile变量规则跟传递性原则，才保证了x=42对线程B可见。
+            <br/>
+            <br/>
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+             没有回复
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             强哥
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            关于java内存模型、jvm内存结构及java对象模型分别深入讲解一下，这样效果更好一些。
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             咱们这个专栏还是专注于并发相关的部分，我怕有人说挂羊头卖狗肉
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             Nevermore
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            // 以下代码来源于【参考 1】
+            <br/>
+            class VolatileExample {
+            <br/>
+            int x = 0;
+            <br/>
+            volatile boolean v = false;
+            <br/>
+            public void writer() {
+            <br/>
+            x = 42;
+            <br/>
+            v = true;
+            <br/>
+            }
+            <br/>
+            public void reader() {
+            <br/>
+            if (v == true) {
+            <br/>
+            // 这里 x 会是多少呢？
+            <br/>
+            }
+            <br/>
+            }
+            <br/>
+            }
+            <br/>
+            <br/>
+            <br/>
+            感觉老师对这个volatile变量规则这块讲的有点草率，volatile变量的写对于读是可见的，对于程序来说，也就是线程A执行write中的v=true对于reader中的v==true是可见的 ，但是这对于x有什么关系？x并没有被volatile修饰。
+            <br/>
+            根据我的理解，volatile强制所修饰的变量及它前边的变量刷新至内存，并且volatile禁止了指令的重排序。
+            <br/>
+            <br/>
+            望指正
+            <br/>
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             你的理解是对的，volatile的实现就是这样的。指导JVM这么实现的规范就是内存模型。这个专栏的侧重点是让大家学会写并发程序，至于底层是怎么实现的，有精力和兴趣的同学，可以自己来把握。
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             magict4
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            老师你好，
+            <br/>
+            <br/>
+            我对『3. 传递性』中您的解释，还是有点疑惑。感觉许多留言的小伙伴们也都有类似的疑惑，还请老师再耐心回答一次。
+            <br/>
+            <br/>
+            您提到：
+            <br/>
+            &gt; “x=42” Happens-Before 写变量 “v=true” ，这是规则 1 的内容；
+            <br/>
+            我的疑惑：变量 x 和 v 没有任何依赖关系，为什么对 x 的赋值 Happens-Before 对 v 的赋值呢？
+            <br/>
+            <br/>
+            这个 Happens-Before 关系，根据我的理解，不是由规则 1 决定的，而是有 volatile 决定的。如果 v 没有被 volatile 修饰，编译器是可以对 x、v 的赋值语句进行重排的。 不知道我的理解是否有问题？
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             “x=42” Happens-Before 写变量 “v=true”
+             <br/>
+             是因为程序顺序就是这么写的：x=42；v=true
+             <br/>
+             <br/>
+             这个案例是综合了 程序的顺序规则+传递规则+volatile 规则
+             <br/>
+             <br/>
+             这三这个规则组合在一起就是你所谓的：“而是有 volatile 决定的”。编译器优化要遵循所有的HB规则。所有，不是一条。所以只有把他们组合在一起才有意义。
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             峰
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            我觉得课后题其实就是利用happenbefore规则去构建abc的写入happenfore于另外一个线程的读取。而6条规则中传递性规则是纽带，然后采用比如规则4，就是把abc的赋值加入一同步块，并先执行，同时另外一个线程申请同一把锁即可。其他的也类似。
+            <br/>
+            <br/>
+            java内存模型对程序员来说提供了按需禁止缓存禁止指令重排的方法。这是我第一次看到这么简单又深刻的解释，老师棒棒哒！！！
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             多谢鼓励啊！
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             鸠翱
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            对于@Junzi的问题：
+            <br/>
+            x=45; // 1
+            <br/>
+            v=true; // 2
+            <br/>
+            这两行会不会导致指令重排？ 答：不会
+            <br/>
+            如果这两行重排序了，那么线程B读取到read()的时候也有可能出现x=0，也就是说线程B看到了v=true却没又看到x=45，这不符合第一条规则（请问老师 这么理解对不对）
+            <br/>
+            我课外查询了一下，从实现方法上，volatile的读写前后会插入内存屏障，保证一些操作是无法没重排序的，其中就有对于volatile的写操作之前的动作不会被重排序到之后
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             是这样。
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             wang
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            老师。对呀 发条橙子 提到如果不加 volatile，当读到v的时候，x就一定能读到42，使用的是使用的是规则1。
+            <br/>
+            我认为不对呀，规则一不是只适用于单线程吗？而读取v是在另一个线程，所以不能使用规则一判断吧。
+            <br/>
+            希望老师可以解释一下，谢谢
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             不加volatile，多线程会有问题
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             王位庆
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            @Junzi，您提的问题刚开始我也很疑惑，但查看了java并发编程的艺术，书上写了jdk1.5之后，增强了volatile的内存含义，限制了编译器和处理器对volatile变量和普通变量的重排序。p47页
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+             没有回复
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             飞翔的花狸猫
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            Happen-before 这个知识点终于理解了，追并发专栏比以前看小说还勤快，盼老师速更啊
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             那小说得写的有多烂！
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             null
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            @发条橙子… 的思考题分析，有些不太准确吧，例如评论里指出的程序顺序性。还有 synchronized 的分析也不太准确吧，synchronized(abc) 可能保证后续操作可见。
+            <br/>
+            <br/>
+            老师是否应该在回复评论时指正，否则童鞋们看到“分析得比我好”的回复，很大可能就照着分析来理解了。
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             synchronized 的分析没有问题，其他线程直接访问还可能不是最新值，我理解直接就是没有使用任何同步手段。
+             <br/>
+             即便用 synchronized，用法不对，也达不到效果。
+             <br/>
+             语言本来就不准确，留言的同学，写的都很随意，实在不太适合以批判的眼光来看待。
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             whyoyyx
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            @胡桥，我把你的sleep(1) ，改成其他耗时计算就能复现。不过在试验之前先保存好相关文件。
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+             没有回复
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             Forever
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            老师 @Handongyang 说当一个对象包含final修饰的实例字段时，其他线程能够看到已经初始化的final实例字段，这是安全的。 那么是否可以理解为思考题中的abc如果设置为final修饰，他也可以被其他的线程看到？
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             可以
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             王成
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            普通读写+普通读写 允许指令重排
+            <br/>
+            普通读写+volatile读 允许
+            <br/>
+            普通读写+volatile写 不允许
+            <br/>
+            volatile读+任何 不允许
+            <br/>
+            volatile写+普通读写 允许
+            <br/>
+            volatile写+volatile读写 不允许
+            <br/>
+            希望大家指导
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+             没有回复
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             涛哥
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            最后那个逸出是不是因为指令重排序导致this赋值操作可能第一个执行，这个时候x还没有赋值，所有可能访问到x=0
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+             没有回复
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             佑儿
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            老师，你好，重读本章有一个疑问，看过一篇jmm的文章，写到jmm定义了线程和主内存之间的抽象关系，具体如下：共享变量存储于主内存中，线程共享；每个线程都有私有的工作内存；工作内存只存储该线程对共享变量的副本，线程不能直接操作主内存，我的疑问是既然每个线程都有私有的本地内存，那为什么前面一章描述单核cpu不存在可见性问题呢？
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             工作内存不是物理存在的，别把它当回事
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             燕青兄弟
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            1：可以在abc这个变量前面，加入volatile修饰符；
+            <br/>
+            2：可以在abc=3这个语句后面，执行一个被volatile关键字修饰的变量赋值操作；
+            <br/>
+            3：可以在abc=3这行代码前后加入synchronized关键字，保证其可见性；
+            <br/>
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+             没有回复
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             w w
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            这个课程很好，把以前只能看懂字读不懂的知识都串起来了，形成体系化，连测试都读懂了，赞啊
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             说明测试水平也不低😄
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             Vincent
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            管程中的锁规则只对synchronized 这个锁有效？
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             是
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             shawn
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            实在忍不住要来讲几句，老师的课程讲得真的很精彩，受益匪浅。
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+             没有回复
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             兔2🐰🍃
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            一楼所说的"（6）.线程中断规则：对线程
+            <br/>
+            interrupt()方法的调用先行发生于被中
+            <br/>
+            断线程的代码检测到中断事件的发生，
+            <br/>
+            可以通过Thread.interrupted(）方法检测
+            <br/>
+            到是否有中断发生。"
+            <br/>
+            对于这个不是很好理解，可以举个例子说明下么，谢谢
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+             没有回复
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             江南豆沙包
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            老师，有个疑问，有没有可能多个线程在同一时间给volatile修饰的变量赋值，那样最终的值是不是就不确定了？
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             后面的会覆盖前面的
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             赌神很低调
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            abc定义为volatil变量，写操作定义在同步块中，读线程join写线程
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+             没有回复
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             life is short, enjoy more.
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            好记性不如烂笔头，我是这么理解这篇文章的
+            <br/>
+            有序性的保证，是hb原则约束优化的结果。
+            <br/>
+            可见性的保证，是被volatile关键字修饰的变量的读操作，会导致其他cpu cache中的变量失效，需要从内存中重新load的结果。
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             我不敢揣测jvm和cpu起如何实现，只要能够用hb推断可见性就够了
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             Felix Envy
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            老师你好，基于happen-before规则，是不是可以理解在jdk1.5之后，双检锁不会再有问题？
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             还是有问题，加volatile可以解决，详细方法可以搜索网文
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             xiyuesmiling
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            1.5之后，如果有规则一，为什么还会导致变异优化导致的读取变量x不对呢？
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             规则一仅仅适用单线程
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             WP
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            优秀，很增长知识
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             看完你也优秀👍
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             陈华应
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            1、直接使用volatile修饰abc，根据happens-before 对volatile的写happens-before于后续对这个变量的读
+            <br/>
+            2、使用volatile修饰控制访问abc的标示，并且在修改abc=3之后将访问标示设置为true，在后续访问abc代码处先判断是否可访问abc，根据happens-before 程序有效性和对volatile语义增强，可保证在访问abc标示为true的时候访问abc一定是3
+            <br/>
+            3、对abc=3操作加锁，管程中的锁，解锁happens-before于加锁
+            <br/>
+            4、主线程设置abc=3，然后调用子线程的start()方法启动子线程，子线程可见abc=3
+            <br/>
+            5、子线程设置abc=3，然后启动子线程，并调用子线程的join方法，子线程abc=3对主线程可见
+            <br/>
+            感觉老师这题就是用来回顾本章内容的，不知道是否正确？
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             很全面了
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             宝石山
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            老师关于HB的第四条管程中锁的规则，适用于ReentrantLock吗？
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             不适用，后面介绍并发包的时候会说这个问题
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             life is short, enjoy more.
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            新学生对本门课程的第一次留言~
+            <br/>
+            // 以下代码来源于【参考 1】
+            <br/>
+            final int x;
+            <br/>
+            // 错误的构造函数
+            <br/>
+            public FinalFieldExample() {
+            <br/>
+            x = 3;
+            <br/>
+            y = 4;
+            <br/>
+            // 此处就是讲 this 逸出，
+            <br/>
+            global.obj = this;
+            <br/>
+            }
+            <br/>
+            <br/>
+            老师你好，这个例子我不是很理解，看到你给其他同学的答复是，this可能没有初始化完。但是这不就是一个构造函数吗，this位于构造函数的最后一行，而且x已经赋值了，为什么可能存在其他线程读到x==0的情况呢？
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+             没有回复
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             life is short, enjoy more.
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            新学生对本门课程的第一次留言~
+            <br/>
+            // 以下代码来源于【参考 1】
+            <br/>
+            final int x;
+            <br/>
+            // 错误的构造函数
+            <br/>
+            public FinalFieldExample() {
+            <br/>
+            x = 3;
+            <br/>
+            y = 4;
+            <br/>
+            // 此处就是讲 this 逸出，
+            <br/>
+            global.obj = this;
+            <br/>
+            }
+            <br/>
+            <br/>
+            老师你好，这个例子我不是很理解，看到你给其他同学的答复是，this可能没有初始化完。但是这不就是一个构造函数吗，this位于构造函数的最后一行，而且x已经赋值了，为什么可能存在其他线程读到x==0的情况呢？
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             指令可能会重排，把x=3排到后面
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             math
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            @junzi:我的理解是，关于第一条程序顺序执行确实发生在单线程中，编译器确实有可能对其进行重排，但是老师说1.5及以后引入happen-before规则可以确定对volitole变量的写对后面该变量的读可见。所以这时候要满足传递性。就不能发生重排
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+             没有回复
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             白了少年头
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            老师我对思考题有个疑问啊，前面有个同学回答有三种办法，其中第二种是：“声明共享变量abc，在synchronized关键字对abc的赋值代码块加锁，由于Happen-before管程锁的规则，可以使得后续的线程可以看到abc的值”，老师回复是三种方式都正确。我的疑问就是，如果只对abc的赋值代码块同步的话，如果有一个getabc()方法，该方法并没有用synchronized修饰，其他线程在调用该方法获取的abc的值，是不是有可能不等于3呢？
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             读写都要加同步块
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             你只是看起来很努力
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            老师，看完你给WL同学解答逸出，终于明白了为什么静态方法中不能使用this了，没有初始化，也就没有这个对象。
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+             没有回复
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             虎虎❤️
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            思考题：可以利用各种happens-before 规则；或者间接的使用传递性来保证其他线程可见。
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+             没有回复
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             虎虎❤️
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            对于规则5，依据我对线程启动的理解，自线程b应该在创建之时 拷贝所以线程a的栈。所以规则5是不是线程创建后自然而然的就满足了这个规则？
+            <br/>
+            <br/>
+            我的理解对吗，还是说有其他的机制来保证？
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             没那么简单，线程栈里都是不共享的数据，天生就安全，问题出在共享变量上
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             虎虎❤️
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            规则4 是需要 结合规则1，3 来理解的。
+            <br/>
+            因为规则1 对x的操作的happens-before 解锁，
+            <br/>
+            因为规则4 解锁happens-before其他管程的加锁。
+            <br/>
+            因为规则3 对x的操作 happens-before 其他管程的加锁。
+            <br/>
+            <br/>
+            那么问题来了，什么情况下触发规则1呢？结合课程所讲，应该是按需的限制缓存和编译优化。所以是在有volatile 或者 synchronized 关键字的时候触发规则1吗？还有没有其他的情况？
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             规则一在单线程永远成，不需要触发
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             虎虎❤️
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            王老师，您好。文中提到了规则3是1.5以后对volatile的强化。
+            <br/>
+            <br/>
+            但是根据规则1 x=42的赋值一定发生在v=true赋值之前 和 规则2 线程b的读（后续读）一定发生在线程a对变量v的写之后。 那么自然而然的，x=42的写不就一定发生在线程b读x之前了吗？为什么说规则3是1.5的强化，并且有了规则3，就避免读到x=0呢？或者说，有了1，2不就一定保证了3的发生吗？
+            <br/>
+            <br/>
+            在描述这个问题的过程中，我已经自己想到了答案。记录下来供和我有（if have）同样疑惑的同学，或者以后的自己参考把。
+            <br/>
+            <br/>
+            我的理解是：这里还是需要从内存的可见性来分析。
+            <br/>
+            规则1 保证了在线程A的cpu缓存中，x=42一定发生在写入v=true之前。
+            <br/>
+            规则2 保证了在线程B在读取v这个变量之前，一定是先确保了其他cpu缓存中的v flush到内存中了，并且把v的值同步到自己的缓存里。也就是如果其他线程在此之前写过变量v，那么此时线程B在读v的时候，一定是能看到之前其他线程写v的结果。
+            <br/>
+            规则3 的传递性则保证了，在线程B读v之前，线程A对x的写操作对线程B一定可见。其实就是保证把线程A中cpu缓存的x值同步到线程B的cpu缓存中。
+            <br/>
+            结论：只有单核的情况下，1，2才能保证3。
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             规则1只适用到线程，别考虑缓存以及怎么实现的，先理解需求，才能把代码写好，先读懂规范，再来想实现，两者别搞混了。实现没有咱们想的那么简单
+             <br/>
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             你说的灰
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            参考1中write()方法代码：
+            <br/>
+            x=45; // 1
+            <br/>
+            v=true; // 2
+            <br/>
+            这两行会不会导致指令重排？
+            <br/>
+            <br/>
+            因为volatile关键字应该只保证了变量v的可见性，happen-before第一条原则在单线程中，1与2重排并不影响结果，那应该有可能出现重排的情况，这样线程B读取到read()的时候也有可能出现x=0。还请老师解答。
+            <br/>
+            <br/>
+            同问，望解答
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             线程1里执行这两行，线程2里执行读。
+             <br/>
+             线程1用规则1，线程 2用vo规则，再加上传递性。
+             <br/>
+             <br/>
+             就有结果了，jvm一定要保证遵守规则，所以不会出现你想的问题。
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             Vincent
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            老师为什么volatile可以保证对他之后的变量修改操作的可见性？happen-before没有这项规则啊
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             没有，哪里说保证这个了？
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             你说的灰
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            同问
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+             没有回复
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             若尘
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            既然引出了内存模型及happen before原则，那jdk中又是如何保证这些原则的呢？或者说怎么实现了这些原则？谢谢
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             没写过jvm的编译器和解释器，不敢妄谈，你如果感兴趣可以研读一下jsr133 的后半部分，那个是面向jvm的实现人员的
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             捞鱼的搬砖奇
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            这里关于final的不是很懂，能不能再说明确点。
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             就是一旦赋值，就不再变化，线程安全。
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             龙哥
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            关于课程
+            <br/>
+            虽说是音频，感觉比视频更有画面感。相关的视频也看过，只是交如何使用，但是没讲原理，讲完就忘。这个课程从原理给大家梳理知识，感觉课程特别赞
+            <br/>
+            <br/>
+            关于思考题
+            <br/>
+            1.可以设置abc变量为volatile,那么线程A对abc的写操作都会Happens-before后续线程
+            <br/>
+            2.使用synchronized,每次操作时都会加锁，保证每次只有一个线程对abc进行改变，使得其他线程都能正确读到该值
+            <br/>
+            3.使用join，线程A改变了abc后，b线程等待A线程完成，A线程对共享变量abc的操作都happens-before后续线程
+            <br/>
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             感谢盛赞
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             阿甘
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            class VolatileExample 中即使变量v不加volatile，由于X86CPU不支持写写重排序，在x86上面操作，这个一定会是x=42（从别的网页看到的，本人没有验证）
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             规范是一码事，具体实现是一码事。这个我也验证不出来，不过还是按照规范办事好些。
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+              臣馟飞扬
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            王老师讲解的happen-before规则甚好，之前以为A happen-before B就是A发生在B之前，这次有了新的认识。
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             多谢盛赞！！
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             QQ怪
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            我是不是可以通过happen-before那几个规则能够推算出前面一个操作的结果对后续操作是可见性?
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             是这样，折腾半天其实就是解决这么个问题。你总结的太到位了！
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             WL
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            我有一个问题,  cpu缓存和各个线程中缓存的主内存的本质复本是不是一回事?
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             我认为，各个线程中不会缓存主内存的副本。除非线程被挂起，才会把寄存器的内容复制到线程上下文里面。
+             <br/>
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             马克
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            老师，有一点不明白：使用volatile关键字修饰的变量，在执行++操作的时候，有取值，计算，赋值的CPU指令，如果在时间分片到达时才执行了计算，此时会继续执行赋值操作再切换吗？同样的，像这种多CPU指令的操作加上synchronize后，中间指令发生切换时，是不是继续执行同步块内的代码？否则，是否会出现脏数据？
+            <br/>
+            谢谢指导
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             操作系统随时都可以切换，不管线程执行到哪里。下一期会讲sync，不会有脏数据的
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             Owen
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            Thread B = new Thread(()-&gt;{
+            <br/>
+            // 主线程调用 B.start() 之前
+            <br/>
+            // 所有对共享变量的修改，此处皆可见
+            <br/>
+            // 此例中，var==77
+            <br/>
+            });
+            <br/>
+            // 此处对共享变量 var 修改
+            <br/>
+            var = 77;
+            <br/>
+            // 主线程启动子线程
+            <br/>
+            B.start();
+            <br/>
+            <br/>
+            Thread B可以访问var是不是意味着主线程在启动Thread B之前要把主存设置为无效，并把var更新到主存?
+            <br/>
+            <br/>
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             这个我真不敢确定。做JVM的人远比我们聪明。
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             Owen
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            synchronized (this) { // 此处自动加锁
+            <br/>
+            // x 是共享变量, 初始值 =10
+            <br/>
+            if (this.x &lt; 12) {
+            <br/>
+            this.x = 12;
+            <br/>
+            }
+            <br/>
+            } // 此处自动解锁
+            <br/>
+            <br/>
+            Hi，老师我此处不太明白，
+            <br/>
+            1.假设A线程进入同步块，执行了  this.x = 12，当自动解锁的时候会把12刷回主存吗？
+            <br/>
+            2.按您文章中的说法，当线程B进入同步块的时候才可以访问到x=12，那jvm是如何做到这一点的，
+            <br/>
+            3.那如果有一个线程C在进入同步块前拿到的x=10？还是12
+            <br/>
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             是否刷缓存、以及jvm是如何做到是JVM的开发人员要考虑的。你可以参考一些内存屏障之类的东西，我工作中用不到，所以我也只是道听途说，就不敢误导大家了。我觉得更重要的是能利用这些规则，推演程序的执行过程。
+             <br/>
+             <br/>
+             线程C在进入同步块前，也许能看到10，也许能看到12，这个不确定。所以才需要同步。
+             <br/>
+             <br/>
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             空知
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            查了下,切换时事先开辟好的一块固定空间里，比如Linux的task_struct 来存线程信息
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             是这样的，linux里的线程就是用进程结构实现的
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             那就这样吧
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            有种恍然大悟的感觉，之前也看过关于happen-before,但一直没能理解。
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             我曾经跟你一样
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             木木匠
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            文中说到volatile 为的是禁用缓存，这里我个人觉得说法欠妥，volatile 主要的作用应该是当修饰的变量被修改了，会立即刷回主缓存，同时其他cpu缓存改变量会失效，需要重新从主缓存刷新变量的值。所以从这层面上说volatile 其实还是有用缓存，只是效果和禁用缓存一样。个人理解。
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             对于初学者，你的这个解释虽然正确，但是不好理解。volatile在1.5以后不仅仅是禁用缓存
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             传葱
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            根据老师上面讲的规则，应该是存在6种情况的，happend-before除了第一种情况用于同一个线程之外。后面都可以处理多线程之间的可见性问题。第一个共享变量加上volatile。第二个传递性，除了这个共享变量abc之外，新建一个volitile变量ccc，在abc赋值之后写入ccc，另外一个线程在读取abc之前读取ccc。第三个，加锁，synchronized。第四个，start方法，一个线程必然是在start（）之后才会run的，start在主线程中又可以使用第一条顺序性规则。第五个，join，等待异步线程结束，其实和start差不对，原理基本相同。最后使用final，只能赋值一次，必然是不变的，声明为共享变量，控制一下赋值时间就行，这个体现的不明显。
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             太全面了！
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             Jaswine
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            膝盖收下！！！
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             要是再多转发就更好了
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             punchline
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            @狂战俄洛伊 有一点不是很明白 根据happens-before 规则第一条，在一个线程中，会按程序代码顺序 前面的代码块对于后面的代码块可见，那为什么int a =1与int b =2的执行顺序不一定呢？ 既然后面的int b =2 可以看见前面的int a=1 那int a=1 不是应该一直在int b=2的前面执行吗?
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+             没有回复
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             陈华
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            老师有一个疑问:
+            <br/>
+            第一个顺序性，第6,7行代码
+            <br/>
+            x = 42;
+            <br/>
+            v = true;
+            <br/>
+            会不会被重新排序为
+            <br/>
+            v = true;
+            <br/>
+            x = 42；
+            <br/>
+            这样A线程 执行完 v=true; 后，cpu切换到线程B，B此时读取的x值为0.
+            <br/>
+            <br/>
+            第6,7有重排序的可能吗，为啥呢？
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             这个只是个例子，实际编译器的优化和cpu执行的优化远不是我们想象的。这个例子只是告诉你编译器重排是不是合法，如果合法那就有可能，实际上可能不会。
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             Geek_ebda96
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            老师，你这个例子
+            <br/>
+            // 以下代码来源于【参考 1】
+            <br/>
+            class VolatileExample {
+            <br/>
+            int x = 0;
+            <br/>
+            volatile boolean v = false;
+            <br/>
+            public void writer() {
+            <br/>
+            x = 42;
+            <br/>
+            v = true;
+            <br/>
+            }
+            <br/>
+            public void reader() {
+            <br/>
+            if (v == true) {
+            <br/>
+            // 这里 x 会是多少呢？
+            <br/>
+            }
+            <br/>
+            }
+            <br/>
+            }
+            <br/>
+            就算不加volatile，启动两个线程，第一个线程writer(),第二个线程reader(),还是不会出现x=0的情况呀
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             这个只是告诉你理论上会出问题。实际上也许不会出。这个例子只是告诉你如何深入理解volatile
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             轻歌赋
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            这里考虑的应该是读在写后面发生的情况下是否正确读到了abc的值，所以直接
+            <br/>
+            final int abc = 123初始化是最简单的
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             是的
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             Smallfly
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            令哥，我不是 Java 程序员，但是对文中的可见性问题有些疑惑。
+            <br/>
+            <br/>
+            上一讲说可见性问题是缓存导致的，我不确定可见性问题，是不是指导致 10000 + 10000 &lt; 20000 的问题。
+            <br/>
+            <br/>
+            因为即使没有 CPU 缓存，这个问题在多核中还是会存在的，比如线程 A 从内存读取变量 x = 0，进行 +1 操作，在写入内存前，线程 B 也读取 x，并做 +1 操作，当两个线程都写入时，x 的值只有 1。
+            <br/>
+            <br/>
+            这个是否属于可见性问题呢？如果不是，出现非预期结果就跟可见性问题没关系；但如果是，这又跟 CPU 缓存没什么关系。
+            <br/>
+            <br/>
+            <br/>
+            还有这一讲中说 1.5 版本后 volatile 中加入 Happens-Before 规则，防止指令被编译器优化。个人觉得只要满足第一条“程序的顺序性规则”，即 x = 42 先于 v = true 执行，就不会出现 x = 0 的结果。规则 2 和规则 3 对这段代码来说没什么帮助，我不确定是不是会在其它场景有效。
+            <br/>
+            <br/>
+            指望老师能指点一二，感谢。
+            <br/>
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             单线程里只有规则一是可以的。文中的例子多线程的场景。读写是两个线程的时候，没办法保证正确性。
+             <br/>
+             <br/>
+             即使没有 CPU 缓存，也会有问题。这个不属于可见性的问题，属于原子性的问题。
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             谢特
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            可见性怎么定义的
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             写完后，别的线程能正确读出来
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             tracer
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            class VolatileExample {
+            <br/>
+            int x = 0;
+            <br/>
+            boolean v = false;
+            <br/>
+            public void writer() {
+            <br/>
+            x = 42;
+            <br/>
+            v = true;
+            <br/>
+            }
+            <br/>
+            <br/>
+            public void reader() {
+            <br/>
+            if (v == true) {
+            <br/>
+            System.out.println(x);
+            <br/>
+            }
+            <br/>
+            }
+            <br/>
+            }
+            <br/>
+            <br/>
+            老师的例子中我删除了volatile，但是并没有测试出输出v=0的情况，这是怎么一回事呢？
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             我也没测出来。因为这个代码编译器压根就没啥好优化的。这个例子只是用来分析问题的
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             陈康康
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            不知道下面这段话怎么理解呢，不可变对象多线程之间还要使用同步（锁），这个没有理解，望回复
+            <br/>
+            Now, having said all of this, if, after a thread constructs an immutable object (that is, an object that only contains final fields), you want to ensure that it is seen correctly by all of the other thread, you still typically need to use synchronization. There is no other way to ensure, for example, that the reference to the immutable object will be seen by the second thread.
+            <br/>
+            <br/>
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             final class A{}
+             <br/>
+             A x = new A();
+             <br/>
+             <br/>
+             它上面这段的意思，应该是说x的事情。x不是final的，所以需要同步。
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             tom
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            我有一个问题一直弄不明白，volatile 禁用指令重排的边界如何确定？synchornzied 包裹的代码块有明确的边界，不管是否在临界区内的代码是否调用其他方法。
+            <br/>
+            <br/>
+            而对 volatile 类型变量前后的变量的操作并没有明确的语义上的边界？查了很多资料，仍然没有找到答案，希望老师解答一下。
+            <br/>
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             别想禁用指令重排的事，就用顺序性规则+传递行规则+volatile规则来推断就可以了
+             <br/>
+             边界就是只要给volatile赋值成功，那么这个赋值语句之前所有代码的执行结果都对其他线程可见
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             M老立
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            王老师 什么时候上新啊 等不及了 这两天反复看已经有的 每一遍都有收获
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             每周二四六
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             Smile
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            1. 对于程序的顺序性规则，针对的一个线程中，前面的操作对后面的操作可见，是不是可以理解为，代码重排之后，在前面执行CPU指令执行的结果对后面的执行结果是可见的。
+            <br/>
+            2. 同样是对于顺序性规则，如果参考1中，没有加volatile关键字的话，x 和v的初始化很有可能重排，那么当多个线程访问时，就会出现当读的时候出现x=0的情况。volatile保证了修改变量之前的语句按照书写的顺序执行，不能进行排序。同时，保证了修饰变量的可见性。
+            <br/>
+            3 对于volatile变量规则，写操作优于读操作，应该是写操作之后的数据会及时更新到内存，其他线程可见，或者理解为写操作优于后续时间对该变量的执行的写操作和读操作
+            <br/>
+            不知道这些理解是否正确，请老师指正
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             对于volatile变量规则：从时间上，先写入的数据，后面查，一定能查的到。优于这个词我不太理解，感觉不太对。
+             <br/>
+             <br/>
+             这些规则得组合着看，才有意义。
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             Geek_ebda96
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            start原则对于非主线程的两个线程有效么，对同一共享变量的赋值顺序跟线程启动顺序有关系不
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             有效。当然有关系。
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             翟毅
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            思考题答案，volatile或者final
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+             没有回复
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             Geek_961eed
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            希望作者，能够深入的讲解下final在并发环境下的应用，final这部分读起来感觉不是太通透，谢谢！
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             这部分final和我们正常的理解是一致的，只要保证不要“逸出”，就没问题。没坑，所以就没有详细介绍。
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             aksonic
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            Thread B = new Thread(()-&gt;{
+            <br/>
+            // 主线程调用 A.start() 之前
+            <br/>
+            // 所有对共享变量的修改，此处皆可见
+            <br/>
+            // 此例中，var==77
+            <br/>
+            });
+            <br/>
+            // 此处对共享变量 var 修改
+            <br/>
+            var = 77;
+            <br/>
+            // 主线程启动子线程
+            <br/>
+            B.start();
+            <br/>
+            <br/>
+            老师，“主线程调用 A.start() 之前”是否写错了，应该是“主线程调用 B.start() 之前”，因为示例代码里面根本没有A。
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             的确是这样啊，多谢指正，回头我让小编改过来。
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             封万里
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            happens-before的第一个规则实际上禁止了指令重排序，可以这么理解吗？希望老师解答一下呢
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             没有禁止指令重排，要求编译器重排后的结果==顺序执行的结果。所以你可以用顺序执行来推断结果。
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             青冰白夜
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            老师问一个纠结的问题
+            <br/>
+            如下事例代码假设是在单线程执行。
+            <br/>
+            int i=0；//语句1
+            <br/>
+            int j=0； //语句2
+            <br/>
+            这里根据Happens-Before规则，单线程中语句1一定是比语句2先执行。但是我看书上说，这里可能会发生指令重排序，也就是说语句1不一定比语句2先执行。怎么感觉和happens-before规则有点矛盾啊？我知道我可能吗哪儿理解有误区，希望老师给我答疑下。
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             可以重排，但是重排的结果要保证Happens-Before规则
+             <br/>
+             int i=0;
+             <br/>
+             int j=1;
+             <br/>
+             int k = i+j;
+             <br/>
+             如果你的代码是上面这样，那么编译器重排成：
+             <br/>
+             int j=1;
+             <br/>
+             int i=0;
+             <br/>
+             int k = i+j;
+             <br/>
+             也是可以的。
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             Nevermore
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            这条规则是指对一个锁的解锁 Happens-Before 于后续对这个锁的加锁。
+            <br/>
+            <br/>
+            <br/>
+            请教老师，如果这个描述反过来，加锁happens-before解锁，这么描述会有什么问题？
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             这个数学题就交给你自己验算吧，要结合其他规则验证两个命题是否等价
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             小
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            早点看到这样的文章就不用那么痛苦了
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             我也那么痛苦过
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             木刻
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            @ Nevermore 理解了下这里就是结合了前三条规则，每一个前面的操作的结果对后续是可见的，因此B线程只要读到了v=true，那么必然已经看到了x=42
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+             没有回复
+             <br/>
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             MaO
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            感觉最关键得一点没有解释啊
+            <br/>
+            <br/>
+            violatile 变量写happen before 读，在什么情况下发生?应该是某种并发场景但是有确实有顺序的时候吧，补充下吧？
+            <br/>
+            否则会感觉是人为对线程的操控导致的。
+            <br/>
+            可能涉及到vm线程调度，希望能讲下不加violatile会出问题的场景
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             双重检查创建单例，不加volatile会出问题。
+             <br/>
+             happen before 不是发生在之前的意思。 这个和线程调度没关系。操作系统乐意调度谁就调度谁，JVM算老几？
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             长眉_张永
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            volatile关键字，每次都读写入内存。
+            <br/>
+            另一种就是happens -before原则，让=3的操作先执行
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             话说，第二种，我是没看明白，你自己明白就好
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             Four
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            1、共享变量abc使用volatile关键字修饰，volatile关键字可以保证可见性。(但是不能保证原子性)
+            <br/>
+            <br/>
+            2、使用锁，synchronize、ReentrantLock...反正有"互斥"语意就行，锁能够保证操作的原子性
+            <br/>
+            <br/>
+            3、使用CAS无锁算法
+            <br/>
+            <br/>
+            4、Thread#join()
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             单独靠CAS无锁算法，应该搞不定可见性。加上volatile关键字就可以了。
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             飞落冰雪
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            @senekis 还有一个start规则你没说到
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             没写的那俩规则，就参考《Java并发编程实战》的第16章吧
+            </p>
+           </div>
+          </div>
+         </li>
+         <li class="comment-item">
+          <div class="info">
+           [评论]
+           <div class="hd">
+            <span class="username">
+            </span>
+            <strong>
+             何方妖孽
+            </strong>
+           </div>
+           <div class="bd">
+           </div>
+           <p>
+            thread的构造函数里是一个箭头函数，这是什么语法？
+           </p>
+           <div class="reply">
+            <div class="reply-hd">
+             <i class="iconfont">
+              
+             </i>
+             <span>
+              作者回复
+             </span>
+            </div>
+            <p class="reply-content">
+            </p>
+            <p>
+             Java8里的Lambda表达式
+            </p>
+           </div>
+          </div>
+         </li>
+        </ul>
+       </div>
+      </div>
+      <!-- -->
+     </div>
+     <!-- -->
+    </div>
+   </div>
+   <div class="_2sRsF5RP_0">
+   </div>
+  </div>
+  <link href="//cdn.mathjax.org" rel="dns-prefetch"/>
+  <div id="gkui-modal-controller">
+   <!-- -->
+  </div>
+  <!-- -->
+ </body>
+ <div id="qb_collection_img_mask" style="display: block; top: 164px; left: 564.5px;">
+  <div class="qb_collection_img_icon">
+  </div>
+  <span>
+   收藏
+  </span>
+ </div>
+</html>

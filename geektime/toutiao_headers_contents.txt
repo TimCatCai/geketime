@@ -1,0 +1,14 @@
+authority: www.toutiao.com
+method: GET
+path: /api/pc/hot_video/?widen=1
+scheme: https
+accept: text/javascript, text/html, application/xml, text/xml, */*
+accept-encoding: gzip, deflate, br
+accept-language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
+content-type: application/x-www-form-urlencoded
+cookie: tt_webid=6728446275598370316; WEATHER_CITY=%E5%8C%97%E4%BA%AC; tt_webid=6728446275598370316; csrftoken=1782d209df8b3e386098baba1112b438; s_v_web_id=e5c2ea04f444b66e0ca358b6ab935e4b; __tasessionId=c9c5wcxhc1566634755524
+referer: https://www.toutiao.com/a6727823910672269838/
+sec-fetch-mode: cors
+sec-fetch-site: same-origin
+user-agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36
+x-requested-with: XMLHttpRequest

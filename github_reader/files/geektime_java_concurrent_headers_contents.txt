@@ -1,0 +1,11 @@
+Accept: application/json, text/plain, */*
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7
+Connection: keep-alive
+Content-Type: application/json
+Cookie: GCID=fd9fe69-34f2626-9c9c0ec-11f46ec; Hm_lvt_022f847c4e3acd44d4a2481d9187f1e6=1564105359,1566585687; _ga=GA1.2.1856061682.1566585687; _gid=GA1.2.1517000337.1566585687; Hm_lpvt_022f847c4e3acd44d4a2481d9187f1e6=1566664247; SERVERID=1fa1f330efedec1559b3abbcb6e30f50|1566664248|1566661213
+Host: time.geekbang.org
+Origin: https://time.geekbang.org
+Sec-Fetch-Mode: cors
+Sec-Fetch-Site: same-origin
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36
