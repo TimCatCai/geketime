@@ -59,16 +59,21 @@ class GetWebsiteData:
         return response
 
     def _request_get(self, url):
+        repeat_time = 5
+        wait_time = 3
         response = None
         try:
-            response = requests.get(url, headers=self._headers, timeout=self._timeout)
+            for i in range(0, repeat_time):
+                response = requests.get(url, headers=self._headers, timeout=self._timeout)
+                if response is not None:
+                    break
+                time.sleep(wait_time)
         except requests.exceptions.Timeout as e:
             print("请求超时：%s" % {str(e)})
         except requests.exceptions.RequestException as e:
             print("网络异常: " + str(e))
         except Exception as e:
             print("不可知错误: %s" % {e})
-
         return response
 
     def get_response_json(self):

@@ -1,3 +1,2 @@
-import re
-meta_content = "http://www.baidu.comhtp://"
-print(re.match(r'htp://', meta_content))
+for count in range(1, 7):
+    print(count)

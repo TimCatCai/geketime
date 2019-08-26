@@ -35,7 +35,7 @@ class GetComments:
         if go_on:
             comments = []
             data = json_back['data']
-            data_list = data['list']
+            data_list = data.get('list', [])
             for a_comment_json in data_list:
                 if a_comment_json is not None:
                     # 获取评论的回复内容

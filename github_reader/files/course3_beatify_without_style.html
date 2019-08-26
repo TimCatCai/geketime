@@ -24,7 +24,15 @@
       </span>
      </div>
      <div class="article-content typo common-content pd" data-v-87ffcada="">
-      <img data-v-87ffcada="" src="picture"/>
+      <center>
+       <a href="https://time.geekbang.org/column/article/84344">
+        原文档链接
+       </a>
+       <br/>
+       <a href="https://static001.geekbang.org/resource/audio/c3/c3/c3944240aa84b97548046226397980c3.mp3">
+        音频链接
+       </a>
+      </center>
       <center>
        <a href="https://static001.geekbang.org/resource/image/c1/e5/c19b0148575cbd819f54d4a04dd8dde5.jpg">
         图片链接
@@ -350,36 +358,21 @@
       </span>
      </h2>
      <ul data-v-87ffcada="">
-      <li class="comment-item" data-v-87ffcada="">
-       <img class="avatar" src="picture"/>
-       <center>
-        <a href="https://static001.geekbang.org/static/time/img/defaultAvatar.e4ab9fe.jpg">
-         图片链接
-        </a>
-       </center>
+      <li class="comment-item">
        <div class="info">
-        <div class="hd">
+        [评论]
+        <div class="user">
          <span class="username">
-          nonohony
          </span>
-         <div class="control">
-          <!-- -->
-          <a class="btn-praise" href="javascript:;">
-           <i class="iconfont">
-            
-           </i>
-           <span>
-            150
-           </span>
-          </a>
-         </div>
+         <strong>
+          nonohony
+         </strong>
         </div>
         <div class="bd">
-         加锁本质就是在锁对象的对象头中写入当前线程id，但是new object每次在内存中都是新对象，所以加锁无效。
         </div>
-        <span class="time">
-         2019-03-05
-        </span>
+        <p>
+         加锁本质就是在锁对象的对象头中写入当前线程id，但是new object每次在内存中都是新对象，所以加锁无效。
+        </p>
         <div class="reply">
          <div class="reply-hd">
           <i class="iconfont">
@@ -390,48 +383,65 @@
           </span>
          </div>
          <p class="reply-content">
-          synchronized的实现都知道了，厉害！
          </p>
-         <p class="reply-time">
-          2019-03-05
+         <p>
+          synchronized的实现都知道了，厉害！
          </p>
         </div>
        </div>
       </li>
-      <li class="comment-item" data-v-87ffcada="">
-       <img class="avatar" src="picture"/>
-       <center>
-        <a href="http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83epY7qGk5GXlibDY3f88RsZZUicUaLuiaIXfIGiczS54kD1hNobYWxcCFHCyiaEru9wpcWuI9WcBB7oNRfA/132">
-         图片链接
-        </a>
-       </center>
+      <li class="comment-item">
        <div class="info">
-        <div class="hd">
+        [评论]
+        <div class="user">
          <span class="username">
-          zyl
          </span>
-         <div class="control">
-          <!-- -->
-          <a class="btn-praise" href="javascript:;">
-           <i class="iconfont">
-            
-           </i>
-           <span>
-            41
-           </span>
-          </a>
-         </div>
+         <strong>
+          w1sl1y
+         </strong>
         </div>
         <div class="bd">
+        </div>
+        <p>
+         经过JVM逃逸分析的优化后，这个sync代码直接会被优化掉，所以在运行时该代码块是无锁的
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+         </p>
+         <p>
+          👍厉害
+          <br/>
+         </p>
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          zyl
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
          sync锁的对象monitor指针指向一个ObjectMonitor对象，所有线程加入他的entrylist里面，去cas抢锁，更改state加1拿锁，执行完代码，释放锁state减1，和aqs机制差不多，只是所有线程不阻塞，cas抢锁，没有队列，属于非公平锁。
          <br/>
          wait的时候，线程进waitset休眠，等待notify唤醒
          <br/>
          <br/>
-        </div>
-        <span class="time">
-         2019-03-05
-        </span>
+        </p>
         <div class="reply">
          <div class="reply-hd">
           <i class="iconfont">
@@ -442,93 +452,28 @@
           </span>
          </div>
          <p class="reply-content">
+         </p>
+         <p>
           sync的优化都知道了，厉害啊
          </p>
-         <p class="reply-time">
-          2019-03-05
-         </p>
         </div>
        </div>
       </li>
-      <li class="comment-item" data-v-87ffcada="">
-       <img class="avatar" src="picture"/>
-       <center>
-        <a href="http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83erBkHFLUBpftqQlK5brd3EDaQFaEfYLfc9iaQrDNJv4eHeSRnSgE5vKnSibJvjUb5hJx5r5nOwa2bRw/132">
-         图片链接
-        </a>
-       </center>
+      <li class="comment-item">
        <div class="info">
-        <div class="hd">
+        [评论]
+        <div class="user">
          <span class="username">
-          w1sl1y
          </span>
-         <div class="control">
-          <!-- -->
-          <a class="btn-praise" href="javascript:;">
-           <i class="iconfont">
-            
-           </i>
-           <span>
-            39
-           </span>
-          </a>
-         </div>
-        </div>
-        <div class="bd">
-         经过JVM逃逸分析的优化后，这个sync代码直接会被优化掉，所以在运行时该代码块是无锁的
-        </div>
-        <span class="time">
-         2019-03-05
-        </span>
-        <div class="reply">
-         <div class="reply-hd">
-          <i class="iconfont">
-           
-          </i>
-          <span>
-           作者回复
-          </span>
-         </div>
-         <p class="reply-content">
-          👍厉害
-          <br/>
-         </p>
-         <p class="reply-time">
-          2019-03-06
-         </p>
-        </div>
-       </div>
-      </li>
-      <li class="comment-item" data-v-87ffcada="">
-       <img class="avatar" src="picture"/>
-       <center>
-        <a href="https://static001.geekbang.org/account/avatar/00/0f/ee/d2/7024431c.jpg">
-         图片链接
-        </a>
-       </center>
-       <div class="info">
-        <div class="hd">
-         <span class="username">
+         <strong>
           探索无止境
-         </span>
-         <div class="control">
-          <!-- -->
-          <a class="btn-praise" href="javascript:;">
-           <i class="iconfont">
-            
-           </i>
-           <span>
-            29
-           </span>
-          </a>
-         </div>
+         </strong>
         </div>
         <div class="bd">
-         不能，因为new了，所以不是同一把锁。老师您好，我对那 synchronized的理解是这样，它并不能改变CPU时间片切换的特点，只是当其他线程要访问这个资源时，发现锁还未释放，所以只能在外面等待，不知道理解是否正确
         </div>
-        <span class="time">
-         2019-03-05
-        </span>
+        <p>
+         不能，因为new了，所以不是同一把锁。老师您好，我对那 synchronized的理解是这样，它并不能改变CPU时间片切换的特点，只是当其他线程要访问这个资源时，发现锁还未释放，所以只能在外面等待，不知道理解是否正确
+        </p>
         <div class="reply">
          <div class="reply-hd">
           <i class="iconfont">
@@ -539,44 +484,28 @@
           </span>
          </div>
          <p class="reply-content">
+         </p>
+         <p>
           理解正确！
          </p>
-         <p class="reply-time">
-          2019-03-05
-         </p>
         </div>
        </div>
       </li>
-      <li class="comment-item" data-v-87ffcada="">
-       <img class="avatar" src="picture"/>
-       <center>
-        <a href="https://static001.geekbang.org/account/avatar/00/13/03/f7/3a493bec.jpg">
-         图片链接
-        </a>
-       </center>
+      <li class="comment-item">
        <div class="info">
-        <div class="hd">
+        [评论]
+        <div class="user">
          <span class="username">
-          老杨同志
          </span>
-         <div class="control">
-          <!-- -->
-          <a class="btn-praise" href="javascript:;">
-           <i class="iconfont">
-            
-           </i>
-           <span>
-            22
-           </span>
-          </a>
-         </div>
+         <strong>
+          老杨同志
+         </strong>
         </div>
         <div class="bd">
-         两把不同的锁，不能保护临界资源。而且这种new出来只在一个地方使用的对象，其它线程不能对它解锁，这个锁会被编译器优化掉。和没有syncronized代码块效果是相同的
         </div>
-        <span class="time">
-         2019-03-05
-        </span>
+        <p>
+         两把不同的锁，不能保护临界资源。而且这种new出来只在一个地方使用的对象，其它线程不能对它解锁，这个锁会被编译器优化掉。和没有syncronized代码块效果是相同的
+        </p>
         <div class="reply">
          <div class="reply-hd">
           <i class="iconfont">
@@ -587,44 +516,28 @@
           </span>
          </div>
          <p class="reply-content">
+         </p>
+         <p>
           实在是太厉害了！！！
          </p>
-         <p class="reply-time">
-          2019-03-05
-         </p>
         </div>
        </div>
       </li>
-      <li class="comment-item" data-v-87ffcada="">
-       <img class="avatar" src="picture"/>
-       <center>
-        <a href="http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83eqjceGMS81zZibA9LECsgAUU1aHPKhfM4WyNgqPtmnxvtzhC3a44ows3g7FuD7ibESAAY0UWsicW0EjA/132">
-         图片链接
-        </a>
-       </center>
+      <li class="comment-item">
        <div class="info">
-        <div class="hd">
+        [评论]
+        <div class="user">
          <span class="username">
-          王大王
          </span>
-         <div class="control">
-          <!-- -->
-          <a class="btn-praise" href="javascript:;">
-           <i class="iconfont">
-            
-           </i>
-           <span>
-            20
-           </span>
-          </a>
-         </div>
+         <strong>
+          王大王
+         </strong>
         </div>
         <div class="bd">
-         Get方法加锁不是为了解决原子性问题，这个读操作本身就是原子性的，是为了实现不能线程间addone方法的操作结果对get方法可见，那么value变量加volitile也可以实现同样效果吗？
         </div>
-        <span class="time">
-         2019-03-05
-        </span>
+        <p>
+         Get方法加锁不是为了解决原子性问题，这个读操作本身就是原子性的，是为了实现不能线程间addone方法的操作结果对get方法可见，那么value变量加volitile也可以实现同样效果吗？
+        </p>
         <div class="reply">
          <div class="reply-hd">
           <i class="iconfont">
@@ -635,39 +548,57 @@
           </span>
          </div>
          <p class="reply-content">
-          是的，并发包里的原子类都是靠它实现的
          </p>
-         <p class="reply-time">
-          2019-03-05
+         <p>
+          是的，并发包里的原子类都是靠它实现的
          </p>
         </div>
        </div>
       </li>
-      <li class="comment-item" data-v-87ffcada="">
-       <img class="avatar" src="picture"/>
-       <center>
-        <a href="https://static001.geekbang.org/static/time/img/defaultAvatar.e4ab9fe.jpg">
-         图片链接
-        </a>
-       </center>
+      <li class="comment-item">
        <div class="info">
-        <div class="hd">
+        [评论]
+        <div class="user">
          <span class="username">
-          石头剪刀布
          </span>
-         <div class="control">
-          <!-- -->
-          <a class="btn-praise" href="javascript:;">
-           <i class="iconfont">
-            
-           </i>
-           <span>
-            10
-           </span>
-          </a>
-         </div>
+         <strong>
+          sbwei🚴
+         </strong>
         </div>
         <div class="bd">
+        </div>
+        <p>
+         最后的思考题: 多把锁保护同一个资源，就像一个厕所坑位，有N多门可以进去，没有丝毫保护效果，管理员一看，还不如把门都撤了，弄成开放式(编译器代码优化)😂。
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+          没有回复
+          <br/>
+         </p>
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          石头剪刀布
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
          老师说：现实世界里，我们可以用多把锁来保护同一个资源，但在并发领域是不行的。
          <br/>
          不能用两把锁锁定同一个资源吗？
@@ -717,10 +648,7 @@
          <br/>
          虽然说这样做没有实际意义，但是也不会导致死锁或者其他不好的结果吧？请老师指导，谢谢。
          <br/>
-        </div>
-        <span class="time">
-         2019-03-08
-        </span>
+        </p>
         <div class="reply">
          <div class="reply-hd">
           <i class="iconfont">
@@ -731,77 +659,29 @@
           </span>
          </div>
          <p class="reply-content">
+         </p>
+         <p>
           你这么优秀，我该怎么指导呢？你这不是用lock1 保护 lock2，lock2保护value吗？很符合我们的原则。我怎么没想到呢？
           <br/>
          </p>
-         <p class="reply-time">
-          2019-03-09
-         </p>
         </div>
        </div>
       </li>
-      <li class="comment-item" data-v-87ffcada="">
-       <img class="avatar" src="picture"/>
-       <center>
-        <a href="https://static001.geekbang.org/account/avatar/00/12/5d/cb/9acac92c.jpg">
-         图片链接
-        </a>
-       </center>
+      <li class="comment-item">
        <div class="info">
-        <div class="hd">
+        [评论]
+        <div class="user">
          <span class="username">
-          sbwei🚴
          </span>
-         <div class="control">
-          <!-- -->
-          <a class="btn-praise" href="javascript:;">
-           <i class="iconfont">
-            
-           </i>
-           <span>
-            8
-           </span>
-          </a>
-         </div>
-        </div>
-        <div class="bd">
-         最后的思考题: 多把锁保护同一个资源，就像一个厕所坑位，有N多门可以进去，没有丝毫保护效果，管理员一看，还不如把门都撤了，弄成开放式(编译器代码优化)😂。
-        </div>
-        <span class="time">
-         2019-03-24
-        </span>
-       </div>
-      </li>
-      <li class="comment-item" data-v-87ffcada="">
-       <img class="avatar" src="picture"/>
-       <center>
-        <a href="http://thirdwx.qlogo.cn/mmopen/vi_32/4QtlO84mT9kcRmeglzXJxM31KiboYG3lIiaYXqKODYH0iaHdQibrwiaAhyUxIedjOliaXOP8pq7k6XZWFeiamGa6u6IOw/132">
-         图片链接
-        </a>
-       </center>
-       <div class="info">
-        <div class="hd">
-         <span class="username">
+         <strong>
           大南瓜
-         </span>
-         <div class="control">
-          <!-- -->
-          <a class="btn-praise" href="javascript:;">
-           <i class="iconfont">
-            
-           </i>
-           <span>
-            8
-           </span>
-          </a>
-         </div>
+         </strong>
         </div>
         <div class="bd">
-         沙发，并不能，不是同一把锁
         </div>
-        <span class="time">
-         2019-03-05
-        </span>
+        <p>
+         沙发，并不能，不是同一把锁
+        </p>
         <div class="reply">
          <div class="reply-hd">
           <i class="iconfont">
@@ -812,572 +692,26 @@
           </span>
          </div>
          <p class="reply-content">
+         </p>
+         <p>
           为快点赞
          </p>
-         <p class="reply-time">
-          2019-03-05
-         </p>
         </div>
        </div>
       </li>
-      <li class="comment-item" data-v-87ffcada="">
-       <img class="avatar" src="picture"/>
-       <center>
-        <a href="https://static001.geekbang.org/account/avatar/00/12/61/94/713b38ef.jpg">
-         图片链接
-        </a>
-       </center>
+      <li class="comment-item">
        <div class="info">
-        <div class="hd">
+        [评论]
+        <div class="user">
          <span class="username">
-          小和尚笨南北
          </span>
-         <div class="control">
-          <!-- -->
-          <a class="btn-praise" href="javascript:;">
-           <i class="iconfont">
-            
-           </i>
-           <span>
-            6
-           </span>
-          </a>
-         </div>
-        </div>
-        <div class="bd">
-         不正确
-         <br/>
-         使用锁保护资源时，对资源的所有操作应该使用同一个锁，这样才能起到保护的作用。
-         <br/>
-         课后题中每个线程对资源的操作都是用的是各自的锁，不存在互斥和竞争的情况。
-         <br/>
-         这就相当于有一个房间，每个人过来都安装一个门，每个人都有自己门的钥匙，大家都可以随意出入这个房间。
-         <br/>
-         由于每个线程都可以随时进入方法，所以存在原子性问题；
-         <br/>
-         但是因为每次都有加锁和解锁的操作，unlock操作会使其他缓存的变量失效，需要重新从主内存中加载变量的值，所以可以解决可见性问题。
-         <br/>
-         如有错误，请老师指正。
-        </div>
-        <span class="time">
-         2019-03-05
-        </span>
-        <div class="reply">
-         <div class="reply-hd">
-          <i class="iconfont">
-           
-          </i>
-          <span>
-           作者回复
-          </span>
-         </div>
-         <p class="reply-content">
-          比喻很生动
-         </p>
-         <p class="reply-time">
-          2019-03-06
-         </p>
-        </div>
-       </div>
-      </li>
-      <li class="comment-item" data-v-87ffcada="">
-       <img class="avatar" src="picture"/>
-       <center>
-        <a href="https://static001.geekbang.org/account/avatar/00/13/4c/c0/f5b54f74.jpg">
-         图片链接
-        </a>
-       </center>
-       <div class="info">
-        <div class="hd">
-         <span class="username">
-          落落彩虹
-         </span>
-         <div class="control">
-          <!-- -->
-          <a class="btn-praise" href="javascript:;">
-           <i class="iconfont">
-            
-           </i>
-           <span>
-            4
-           </span>
-          </a>
-         </div>
-        </div>
-        <div class="bd">
-         老师的文章我都要看几遍.评论区也不敢放过.
-         <br/>
-         <br/>
-         评论区有些demo，注意关于join的hb原则；注意system.out.println对可见性的影响，该方法内部加锁了.
-         <br/>
-         还有个问题，如果我不用join，而是sleep足够长时间以确保线程跑完了，也能保证可见性.因为线程结束了他的本地工作空间该释放了，数据要强制刷回内存了……这也可以认为是join的hb原则吗？我看网上说到hb都会把join的那个原则说成是线程终止规则.
-         <br/>
-        </div>
-        <span class="time">
-         2019-03-10
-        </span>
-        <div class="reply">
-         <div class="reply-hd">
-          <i class="iconfont">
-           
-          </i>
-          <span>
-           作者回复
-          </span>
-         </div>
-         <p class="reply-content">
-          感谢不离不弃啊
-          <br/>
-          测试的时候经常用sleep，实际项目还是用join吧。这个我感觉不能认为是join原则。规范里确实没有。
-         </p>
-         <p class="reply-time">
-          2019-03-10
-         </p>
-        </div>
-       </div>
-      </li>
-      <li class="comment-item" data-v-87ffcada="">
-       <img class="avatar" src="picture"/>
-       <center>
-        <a href="https://static001.geekbang.org/static/time/img/defaultAvatar.e4ab9fe.jpg">
-         图片链接
-        </a>
-       </center>
-       <div class="info">
-        <div class="hd">
-         <span class="username">
-          侯大虎
-         </span>
-         <div class="control">
-          <!-- -->
-          <a class="btn-praise" href="javascript:;">
-           <i class="iconfont">
-            
-           </i>
-           <span>
-            3
-           </span>
-          </a>
-         </div>
-        </div>
-        <div class="bd">
-         老师，有个小问题  class锁锁的是该类的所有实例，和this不应该是同一把锁吗(this不就是这个类的实例吗)？
-        </div>
-        <span class="time">
-         2019-03-30
-        </span>
-        <div class="reply">
-         <div class="reply-hd">
-          <i class="iconfont">
-           
-          </i>
-          <span>
-           作者回复
-          </span>
-         </div>
-         <p class="reply-content">
-          没有包含关系，就像公交卡和单次票一样，都能坐车
-          <br/>
-         </p>
-         <p class="reply-time">
-          2019-03-31
-         </p>
-        </div>
-       </div>
-      </li>
-      <li class="comment-item" data-v-87ffcada="">
-       <img class="avatar" src="picture"/>
-       <center>
-        <a href="https://static001.geekbang.org/account/avatar/00/11/f7/0a/067537fc.jpg">
-         图片链接
-        </a>
-       </center>
-       <div class="info">
-        <div class="hd">
-         <span class="username">
+         <strong>
           别皱眉
-         </span>
-         <div class="control">
-          <!-- -->
-          <a class="btn-praise" href="javascript:;">
-           <i class="iconfont">
-            
-           </i>
-           <span>
-            3
-           </span>
-          </a>
-         </div>
+         </strong>
         </div>
         <div class="bd">
-         老师，我觉得get方法有必要用加锁来保证可见性的另一个理由如下:
-         <br/>
-         class SafeCalc {
-         <br/>
-         long value = 0L;
-         <br/>
-         <br/>
-         synchronized long get() {
-         <br/>
-         return value;
-         <br/>
-         }
-         <br/>
-         <br/>
-         synchronized void add(int i) {
-         <br/>
-         // 业务代码....假如这里比较耗时
-         <br/>
-         value += i;
-         <br/>
-         }
-         <br/>
-         }
-         <br/>
-         <br/>
-         假如线程A执行add方法 当方法还没执行完
-         <br/>
-         线程B执行get方法
-         <br/>
-         如果get方法没有加锁 因为此时A正在修改这个数据  B获取的数据不是最新的
-         <br/>
-         <br/>
-         您看我说的对吗？还是说具体场景有不同的需求，有些还是允许这点延迟的？
-         <br/>
-         本人大三，请前辈多指教😁😁谢谢
-         <br/>
         </div>
-        <span class="time">
-         2019-03-13
-        </span>
-        <div class="reply">
-         <div class="reply-hd">
-          <i class="iconfont">
-           
-          </i>
-          <span>
-           作者回复
-          </span>
-         </div>
-         <p class="reply-content">
-          我觉得你这个才是正道，并发问题小心还躲不过呢，哪里敢冒险啊！没想到还有学生看这个专栏，有前途👍
-          <br/>
-          <br/>
-         </p>
-         <p class="reply-time">
-          2019-03-13
-         </p>
-        </div>
-       </div>
-      </li>
-      <li class="comment-item" data-v-87ffcada="">
-       <img class="avatar" src="picture"/>
-       <center>
-        <a href="http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTKtS26SJpSF7JLu9pusGsy1Qln0NdQg1eV2YKOJxpX2QXaBuuyXMqZY3fm0rhzKwsqN5aa6CVNOQQ/132">
-         图片链接
-        </a>
-       </center>
-       <div class="info">
-        <div class="hd">
-         <span class="username">
-          陈华
-         </span>
-         <div class="control">
-          <!-- -->
-          <a class="btn-praise" href="javascript:;">
-           <i class="iconfont">
-            
-           </i>
-           <span>
-            3
-           </span>
-          </a>
-         </div>
-        </div>
-        <div class="bd">
-         我理解get方法不需要加synchroized关键字，也可以保证可见性。
-         <br/>
-         因为 对 value的写有被 synchroized 修饰，addOne（）方法结束后，会强制其他CPU缓存失效，从新从内存读取最新值！
-         <br/>
-         <br/>
-         class SafeCalc {
-         <br/>
-         long value = 0L;
-         <br/>
-         long get() {
-         <br/>
-         return value;
-         <br/>
-         }
-         <br/>
-         synchronized void addOne() {
-         <br/>
-         value += 1;
-         <br/>
-         }
-         <br/>
-         }
-         <br/>
-        </div>
-        <span class="time">
-         2019-03-07
-        </span>
-        <div class="reply">
-         <div class="reply-hd">
-          <i class="iconfont">
-           
-          </i>
-          <span>
-           作者回复
-          </span>
-         </div>
-         <p class="reply-content">
-          你说的对，从实现上看是这样。但是hb没有这样的要求
-          <br/>
-         </p>
-         <p class="reply-time">
-          2019-03-07
-         </p>
-        </div>
-       </div>
-      </li>
-      <li class="comment-item" data-v-87ffcada="">
-       <img class="avatar" src="picture"/>
-       <center>
-        <a href="https://static001.geekbang.org/account/avatar/00/14/7a/14/1aeddf3a.jpg">
-         图片链接
-        </a>
-       </center>
-       <div class="info">
-        <div class="hd">
-         <span class="username">
-          churchchen
-         </span>
-         <div class="control">
-          <!-- -->
-          <a class="btn-praise" href="javascript:;">
-           <i class="iconfont">
-            
-           </i>
-           <span>
-            3
-           </span>
-          </a>
-         </div>
-        </div>
-        <div class="bd">
-         class SafeCalc {
-         <br/>
-         static long value = 0L;
-         <br/>
-         synchronized long get() {
-         <br/>
-         return value;
-         <br/>
-         }
-         <br/>
-         synchronized static void addOne() {
-         <br/>
-         value += 1;
-         <br/>
-         }
-         <br/>
-         }
-         <br/>
-         <br/>
-         <br/>
-         get()方法的可见性不太理解为什么不能保证
-        </div>
-        <span class="time">
-         2019-03-06
-        </span>
-        <div class="reply">
-         <div class="reply-hd">
-          <i class="iconfont">
-           
-          </i>
-          <span>
-           作者回复
-          </span>
-         </div>
-         <p class="reply-content">
-          get和addone锁的是一个对象，结合上一期的hb规则再想想
-          <br/>
-         </p>
-         <p class="reply-time">
-          2019-03-07
-         </p>
-        </div>
-       </div>
-      </li>
-      <li class="comment-item" data-v-87ffcada="">
-       <img class="avatar" src="picture"/>
-       <center>
-        <a href="https://static001.geekbang.org/account/avatar/00/12/99/2c/faadcfbc.jpg">
-         图片链接
-        </a>
-       </center>
-       <div class="info">
-        <div class="hd">
-         <span class="username">
-          ChallengeND
-         </span>
-         <div class="control">
-          <!-- -->
-          <a class="btn-praise" href="javascript:;">
-           <i class="iconfont">
-            
-           </i>
-           <span>
-            3
-           </span>
-          </a>
-         </div>
-        </div>
-        <div class="bd">
-         synchronized的加锁解锁，具体是怎么实现的，没有讲
-        </div>
-        <span class="time">
-         2019-03-05
-        </span>
-        <div class="reply">
-         <div class="reply-hd">
-          <i class="iconfont">
-           
-          </i>
-          <span>
-           作者回复
-          </span>
-         </div>
-         <p class="reply-content">
-          有兴趣的自己找资料看吧
-         </p>
-         <p class="reply-time">
-          2019-03-05
-         </p>
-        </div>
-       </div>
-      </li>
-      <li class="comment-item" data-v-87ffcada="">
-       <img class="avatar" src="picture"/>
-       <center>
-        <a href="https://static001.geekbang.org/account/avatar/00/11/fd/dd/baeda83e.jpg">
-         图片链接
-        </a>
-       </center>
-       <div class="info">
-        <div class="hd">
-         <span class="username">
-          Monster!
-         </span>
-         <div class="control">
-          <!-- -->
-          <a class="btn-praise" href="javascript:;">
-           <i class="iconfont">
-            
-           </i>
-           <span>
-            2
-           </span>
-          </a>
-         </div>
-        </div>
-        <div class="bd">
-         private volatile Long count = 0L;
-         <br/>
-         private  void add(){
-         <br/>
-         int add = 0;
-         <br/>
-         while (add++&lt;10000){
-         <br/>
-         count ++;
-         <br/>
-         }
-         <br/>
-         }
-         <br/>
-         public static Long calc() throws InterruptedException {
-         <br/>
-         ThreadCountTest threadCountTest = new ThreadCountTest();
-         <br/>
-         Thread thread1 = new Thread(()-&gt;{
-         <br/>
-         threadCountTest.add();
-         <br/>
-         });
-         <br/>
-         Thread thread2 = new Thread(() -&gt; {
-         <br/>
-         threadCountTest.add();
-         <br/>
-         });
-         <br/>
-         //开启两个线程
-         <br/>
-         thread1.start();
-         <br/>
-         thread2.start();
-         <br/>
-         //等待两个线程结束
-         <br/>
-         /*thread1.join();
-         <br/>
-         thread2.join();*/
-         <br/>
-         <br/>
-         return threadCountTest.count;
-         <br/>
-         }
-         <br/>
-         王老师，请教一下，根据上一节的思考题，如果要想让线程A对共享资源的修改对线程B可见其中一种方法就是在共享变量上加volatile关键字，如上述代码在注释掉两个方法的join()时得出的结果为0，放开两个join()方法后得出的结果又是随机的，这个问题出在哪里呢？
-        </div>
-        <span class="time">
-         2019-03-28
-        </span>
-        <div class="reply">
-         <div class="reply-hd">
-          <i class="iconfont">
-           
-          </i>
-          <span>
-           作者回复
-          </span>
-         </div>
-         <p class="reply-content">
-          那两个线程还没来得及跑，主线程执行到return threadCountTest.count;了
-         </p>
-         <p class="reply-time">
-          2019-03-28
-         </p>
-        </div>
-       </div>
-      </li>
-      <li class="comment-item" data-v-87ffcada="">
-       <img class="avatar" src="picture"/>
-       <center>
-        <a href="https://static001.geekbang.org/account/avatar/00/11/f7/0a/067537fc.jpg">
-         图片链接
-        </a>
-       </center>
-       <div class="info">
-        <div class="hd">
-         <span class="username">
-          别皱眉
-         </span>
-         <div class="control">
-          <!-- -->
-          <a class="btn-praise" href="javascript:;">
-           <i class="iconfont">
-            
-           </i>
-           <span>
-            2
-           </span>
-          </a>
-         </div>
-        </div>
-        <div class="bd">
+        <p>
          相信很多人跟我一样会碰到这个问题,评论里也看到有人在问，内容有点长，辛苦老师帮忙大家分析下了 哈哈
          <br/>
          ---------------------------------------------------------
@@ -1505,10 +839,7 @@
          ---------------------------------------------------------
          <br/>
          在评论里好多大神 能学到好多东西😄😄
-        </div>
-        <span class="time">
-         2019-03-17
-        </span>
+        </p>
         <div class="reply">
          <div class="reply-hd">
           <i class="iconfont">
@@ -1519,6 +850,8 @@
           </span>
          </div>
          <p class="reply-content">
+         </p>
+         <p>
           1. println的代码里锁的this指的是你的控制台，这个锁跟你的代码没关系，而且println里也没有写操作，所以println不会导致强刷缓存。
           <br/>
           <br/>
@@ -1533,42 +866,36 @@
           <br/>
           并发问题本来就是小概率的事件，尤其有了IO操作之后，概率就更低了。
          </p>
-         <p class="reply-time">
-          2019-03-17
-         </p>
         </div>
        </div>
       </li>
-      <li class="comment-item" data-v-87ffcada="">
-       <img class="avatar" src="picture"/>
-       <center>
-        <a href="https://static001.geekbang.org/account/avatar/00/12/df/1c/70d51b43.jpg">
-         图片链接
-        </a>
-       </center>
+      <li class="comment-item">
        <div class="info">
-        <div class="hd">
+        [评论]
+        <div class="user">
          <span class="username">
-          毛祥
          </span>
-         <div class="control">
-          <!-- -->
-          <a class="btn-praise" href="javascript:;">
-           <i class="iconfont">
-            
-           </i>
-           <span>
-            2
-           </span>
-          </a>
-         </div>
+         <strong>
+          小和尚笨南北
+         </strong>
         </div>
         <div class="bd">
-         线程每次调用方法锁的都是新new的一个对象。令哥讲解得透彻，让我这个菜鸟一看code就知道答案。此外，留言板潜伏一樽樽大神，有种豁然开朗的感觉。
         </div>
-        <span class="time">
-         2019-03-07
-        </span>
+        <p>
+         不正确
+         <br/>
+         使用锁保护资源时，对资源的所有操作应该使用同一个锁，这样才能起到保护的作用。
+         <br/>
+         课后题中每个线程对资源的操作都是用的是各自的锁，不存在互斥和竞争的情况。
+         <br/>
+         这就相当于有一个房间，每个人过来都安装一个门，每个人都有自己门的钥匙，大家都可以随意出入这个房间。
+         <br/>
+         由于每个线程都可以随时进入方法，所以存在原子性问题；
+         <br/>
+         但是因为每次都有加锁和解锁的操作，unlock操作会使其他缓存的变量失效，需要重新从主内存中加载变量的值，所以可以解决可见性问题。
+         <br/>
+         如有错误，请老师指正。
+        </p>
         <div class="reply">
          <div class="reply-hd">
           <i class="iconfont">
@@ -1579,93 +906,28 @@
           </span>
          </div>
          <p class="reply-content">
-          你也会成为一尊大神的
-          <br/>
          </p>
-         <p class="reply-time">
-          2019-03-07
+         <p>
+          比喻很生动
          </p>
         </div>
        </div>
       </li>
-      <li class="comment-item" data-v-87ffcada="">
-       <img class="avatar" src="picture"/>
-       <center>
-        <a href="https://static001.geekbang.org/account/avatar/00/13/0d/29/18272af9.jpg">
-         图片链接
-        </a>
-       </center>
+      <li class="comment-item">
        <div class="info">
-        <div class="hd">
+        [评论]
+        <div class="user">
          <span class="username">
-          hxy
          </span>
-         <div class="control">
-          <!-- -->
-          <a class="btn-praise" href="javascript:;">
-           <i class="iconfont">
-            
-           </i>
-           <span>
-            2
-           </span>
-          </a>
-         </div>
+         <strong>
+          宝爸学学学
+         </strong>
         </div>
         <div class="bd">
-         老师请问synchronized修饰的临界区中，如果不是同一把锁，能保证共享变量的可见性吗？
-         <br/>
-         private final static int cnt = 10000;
-         <br/>
-         private static int tmp = 0;
-         <br/>
-         <br/>
-         public static void main(String[] args) {
-         <br/>
-         <br/>
-         Object lock1 = new Object();
-         <br/>
-         Object lock2 = new Object();
-         <br/>
-         <br/>
-         Thread thread1 = new Thread(() -&gt; {
-         <br/>
-         synchronized (lock1) {
-         <br/>
-         for (int i = 0; i &lt; cnt; i++) {
-         <br/>
-         tmp++;
-         <br/>
-         }
-         <br/>
-         }
-         <br/>
-         });
-         <br/>
-         Thread thread2 = new Thread(() -&gt; {
-         <br/>
-         Watch.slp(10L);
-         <br/>
-         synchronized (lock2) {
-         <br/>
-         System.out.println("tmp is: " + tmp);
-         <br/>
-         }
-         <br/>
-         });
-         <br/>
-         <br/>
-         thread2.start();
-         <br/>
-         thread1.start();
-         <br/>
-         }
-         <br/>
-         我这样试了一下，thread2最后读的值是正确的，感觉有一点奇怪
         </div>
-        <span class="time">
-         2019-03-06
-        </span>
+        <p>
+         我觉得评论区学到的更多啊，你们真的是来学习的吗 :D
+        </p>
         <div class="reply">
          <div class="reply-hd">
           <i class="iconfont">
@@ -1676,12 +938,975 @@
           </span>
          </div>
          <p class="reply-content">
-          这种简单情况，实际上出bug的概率还真是很低。但是低不意味着正确。
+          没有回复
           <br/>
-          也不用奇怪，我们所说的都是可能。锁两个对象，编译器官方不保证可见性，私下里也许能保证。我们不能依赖于私下的方案。
          </p>
-         <p class="reply-time">
-          2019-03-06
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          别皱眉
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
+         老师，我觉得get方法有必要用加锁来保证可见性的另一个理由如下:
+         <br/>
+         class SafeCalc {
+         <br/>
+         long value = 0L;
+         <br/>
+         <br/>
+         synchronized long get() {
+         <br/>
+         return value;
+         <br/>
+         }
+         <br/>
+         <br/>
+         synchronized void add(int i) {
+         <br/>
+         // 业务代码....假如这里比较耗时
+         <br/>
+         value += i;
+         <br/>
+         }
+         <br/>
+         }
+         <br/>
+         <br/>
+         假如线程A执行add方法 当方法还没执行完
+         <br/>
+         线程B执行get方法
+         <br/>
+         如果get方法没有加锁 因为此时A正在修改这个数据  B获取的数据不是最新的
+         <br/>
+         <br/>
+         您看我说的对吗？还是说具体场景有不同的需求，有些还是允许这点延迟的？
+         <br/>
+         本人大三，请前辈多指教😁😁谢谢
+         <br/>
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+         </p>
+         <p>
+          我觉得你这个才是正道，并发问题小心还躲不过呢，哪里敢冒险啊！没想到还有学生看这个专栏，有前途👍
+          <br/>
+          <br/>
+         </p>
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          落落彩虹
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
+         老师的文章我都要看几遍.评论区也不敢放过.
+         <br/>
+         <br/>
+         评论区有些demo，注意关于join的hb原则；注意system.out.println对可见性的影响，该方法内部加锁了.
+         <br/>
+         还有个问题，如果我不用join，而是sleep足够长时间以确保线程跑完了，也能保证可见性.因为线程结束了他的本地工作空间该释放了，数据要强制刷回内存了……这也可以认为是join的hb原则吗？我看网上说到hb都会把join的那个原则说成是线程终止规则.
+         <br/>
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+         </p>
+         <p>
+          感谢不离不弃啊
+          <br/>
+          测试的时候经常用sleep，实际项目还是用join吧。这个我感觉不能认为是join原则。规范里确实没有。
+         </p>
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          陈华
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
+         我理解get方法不需要加synchroized关键字，也可以保证可见性。
+         <br/>
+         因为 对 value的写有被 synchroized 修饰，addOne（）方法结束后，会强制其他CPU缓存失效，从新从内存读取最新值！
+         <br/>
+         <br/>
+         class SafeCalc {
+         <br/>
+         long value = 0L;
+         <br/>
+         long get() {
+         <br/>
+         return value;
+         <br/>
+         }
+         <br/>
+         synchronized void addOne() {
+         <br/>
+         value += 1;
+         <br/>
+         }
+         <br/>
+         }
+         <br/>
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+         </p>
+         <p>
+          你说的对，从实现上看是这样。但是hb没有这样的要求
+          <br/>
+         </p>
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          churchchen
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
+         class SafeCalc {
+         <br/>
+         static long value = 0L;
+         <br/>
+         synchronized long get() {
+         <br/>
+         return value;
+         <br/>
+         }
+         <br/>
+         synchronized static void addOne() {
+         <br/>
+         value += 1;
+         <br/>
+         }
+         <br/>
+         }
+         <br/>
+         <br/>
+         <br/>
+         get()方法的可见性不太理解为什么不能保证
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+         </p>
+         <p>
+          get和addone锁的是一个对象，结合上一期的hb规则再想想
+          <br/>
+         </p>
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          彻头撤尾
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
+         别皱眉同学,我特意把你的代码考下来了,run方法里什么都不加 就是死循环,加一个变量b==2作为循环出口,线程b也可以正常退出的啊!!!!线程可见性问题应该描述的是变量被修改的这一瞬间其他线程可见性问题吧?你加不加打印语句,加不加同步代码块都不会影响线程b的正常结束吧?只要变量最新值刷到主内存中,线程b 就可见然后就终止了.
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+         </p>
+         <p>
+          感谢热心同学的回复！！
+         </p>
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          侯大虎
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
+         老师，有个小问题  class锁锁的是该类的所有实例，和this不应该是同一把锁吗(this不就是这个类的实例吗)？
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+         </p>
+         <p>
+          没有包含关系，就像公交卡和单次票一样，都能坐车
+          <br/>
+         </p>
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          Vincent
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
+         synchronized 案例中锁是synchronized，锁定对象是this或者 XXX.class 这里来看，我们的锁结构是synchronized，锁定的资源是对应的this和 XXX.class，在文中作者特意区分锁结构和被保护的资源是很好的一点，但是行文中并没有特意去说明谁是锁结构，谁是被保护资源
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+          没有回复
+          <br/>
+         </p>
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          ChallengeND
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
+         synchronized的加锁解锁，具体是怎么实现的，没有讲
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+         </p>
+         <p>
+          有兴趣的自己找资料看吧
+         </p>
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          TaroYoVen
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
+         不同锁，所以并没有互斥
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+         </p>
+         <p>
+          而且每次调用都不同
+         </p>
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          王智
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
+         不能，可以new一个object当做成员变量，应该就可以了。
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+         </p>
+         <p>
+          正确
+          <br/>
+         </p>
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          JJ
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
+         老师，受保护资源和锁的关系是1:N吧
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+         </p>
+         <p>
+          你比我说的还抽象
+         </p>
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          新世界
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
+         对于get方法不加synchronized关键字会出现并发问题的场景，可以这样理解吗？CPU a加锁设置count值为1，同时从寄存器同步值1到主存，CPU b这时候执行get方法没有加同一把锁，不会从主存拿最新值更新到CPU b的寄存器，当CPU b执行get方法时，依然获取的时之前cpu b寄存器的值，不是主存中更新的最新值，可以这样理解吗？
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+         </p>
+         <p>
+          你可以这样理解。
+         </p>
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          Solitary_J
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
+         两把锁不可见性
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+         </p>
+         <p>
+          不仅仅是不可见
+         </p>
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          无庸
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
+         这个例子value 加 volatile 修饰之后。根据happen before 原则写之后，读也是可见的吧
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+         </p>
+         <p>
+          可见。不保证原子性
+         </p>
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          ... ...
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
+         加加操作原子性没问题！可见性没有'
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+         </p>
+         <p>
+          原子性也有问题，因为相当于无锁
+         </p>
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          Thomas
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
+         加锁的对象不同
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+         </p>
+         <p>
+          不仅仅不同
+         </p>
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          峰
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
+         每次进入临界区，拿的锁都不一样，这和不加锁的代码是一样的，就是慢好多😄
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+         </p>
+         <p>
+          应该不会慢，编译器会优化成无锁代码
+         </p>
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          Alan
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
+         首先回答下课后问题哈，使用方式是不正确的，每次都锁资源都是不一样的，导致等于没加锁，不能保证可见性。
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+         </p>
+         <p>
+          👍厉害
+          <br/>
+         </p>
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          Nevermore
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
+         一个资源，使用了两把锁。
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+         </p>
+         <p>
+          每次调用都创建了新的，相当于无锁，编译器会优化掉同步关键字
+          <br/>
+         </p>
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          狂战俄洛伊
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
+         嗯，有问题，两把锁锁的资源不一样，这两把锁并不是互斥的，所以存在并发问题😁
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+         </p>
+         <p>
+          👍
+          <br/>
+         </p>
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          小小小丶盘子
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
+         思考题中，每次访问都会加锁，但是每次锁不同(new object），老师在文中提到，一把锁可以对应N个资源，现在是多把锁对应一个资源，并不能起到互斥作用，加1操作并不是原子性。同时由于不是一把锁，可见性也无法实现。不符合Happen before 原则。我的个人理解，请老师批评指正。😄
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+         </p>
+         <p>
+          是这样，没有任何互斥作用
+          <br/>
+         </p>
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          笨拙的自由
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
+         不正确，两个方法不是竞争同一把锁，对资源起不了保护作用
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+         </p>
+         <p>
+          👍
+          <br/>
+         </p>
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          酱油君
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
+         ① class SafeCalc {
+         <br/>
+         long value = 0L;
+         <br/>
+         long get() {
+         <br/>
+         return value;
+         <br/>
+         }
+         <br/>
+         synchronized void addOne() {
+         <br/>
+         value += 1;
+         <br/>
+         }
+         <br/>
+         }
+         <br/>
+         <br/>
+         多线程下 addOne() 原子可见均没问题
+         <br/>
+         多线程下 get() 可见性有问题 不遵循happens–before原则
+         <br/>
+         <br/>
+         ② class SafeCalc {
+         <br/>
+         long value = 0L;
+         <br/>
+         long synchronized get() {
+         <br/>
+         return value;
+         <br/>
+         }
+         <br/>
+         synchronized void addOne() {
+         <br/>
+         value += 1;
+         <br/>
+         }
+         <br/>
+         }
+         <br/>
+         <br/>
+         多线程下 get addOne 的 原子性 可见性都没问题 遵循happens–before原则
+         <br/>
+         <br/>
+         ③ class SafeCalc {
+         <br/>
+         long value = 0L;
+         <br/>
+         synchronized  long get() {
+         <br/>
+         return value;
+         <br/>
+         }
+         <br/>
+         synchronized void static addOne() {
+         <br/>
+         value += 1;
+         <br/>
+         }
+         <br/>
+         }
+         <br/>
+         <br/>
+         多线程下 get addOne 都有问题 所对象不同
+         <br/>
+         <br/>
+         <br/>
+         ④ class SafeCalc {
+         <br/>
+         long value = 0L;
+         <br/>
+         long get() {
+         <br/>
+         synchronized (new Object()) {
+         <br/>
+         return value;
+         <br/>
+         }
+         <br/>
+         }
+         <br/>
+         void addOne() {
+         <br/>
+         synchronized (new Object()) {
+         <br/>
+         value += 1;
+         <br/>
+         }
+         <br/>
+         }
+         <br/>
+         }
+         <br/>
+         <br/>
+         这两个 new Object()，不是同一个锁对象，也就不满足happens–before原则对同一锁对象的要求，因此可见性和原子性都不能保证啦！
+         <br/>
+         <br/>
+         每次锁的对象不一样，任意一个线程都可以进来，都可能读到相同的值，就像读到都是0，然后又同时写了两次1一样，所以不是线程安全的啦!
+         <br/>
+         <br/>
+         有说不对的地方老师告知一下啊！
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+         </p>
+         <p>
+          完全正确
+          <br/>
+         </p>
+        </div>
+       </div>
+      </li>
+      <li class="comment-item">
+       <div class="info">
+        [评论]
+        <div class="user">
+         <span class="username">
+         </span>
+         <strong>
+          shen
+         </strong>
+        </div>
+        <div class="bd">
+        </div>
+        <p>
+         题目中new Object() jvm会自动优化点的，所以他是无效的，可以声明一个成员变量Object lock=new Object()，使用lock这个锁
+        </p>
+        <div class="reply">
+         <div class="reply-hd">
+          <i class="iconfont">
+           
+          </i>
+          <span>
+           作者回复
+          </span>
+         </div>
+         <p class="reply-content">
+         </p>
+         <p>
+          👍厉害
+          <br/>
          </p>
         </div>
        </div>

@@ -1,3 +1,5 @@
+import time
+
 import requests
 from requests import exceptions
 import json
@@ -40,7 +42,15 @@ class GetWebsiteData:
         self._timeout = timeout
 
     def get(self):
-        self._response = self._request_get(self._url)
+        wait_time = 3
+        repeat_time = 5
+        response = None
+        for i in range(0, repeat_time):
+            response = self._request_get(self._url)
+            if response is not None:
+                break
+            time.sleep(wait_time)
+        self._response = response
         return self._response
 
     def post(self, url='', payload={}):

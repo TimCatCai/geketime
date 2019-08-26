@@ -23,11 +23,7 @@ def go(keyword):
     toutiao_page = GetWebsiteData(headers_file_path, url.format(offset))
     response = None
     while go_on:
-        for i in range(0, repeat_time):
-            time.sleep(sleep_time)
-            response = toutiao_page.get()
-            if response is not None:
-                break
+        response = toutiao_page.get()
         print("offset: " + str(offset))
         if response is not None:
             new_file = 'toutiao_content.txt'
