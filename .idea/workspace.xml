@@ -5,33 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90cf12a9-34af-4d6c-b452-199511c392d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/github_reader/article.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/github_reader/files/java_concurrent_json.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/github_reader/geektime_page_lessen.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geektime/get_toutiao_pictures.py" beforeDir="false" afterPath="$PROJECT_DIR$/geektime/get_toutiao_pictures.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/geektime/get_website_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/geektime/get_website_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/github_reader/download_directly.py" beforeDir="false" afterPath="$PROJECT_DIR$/github_reader/download_directly.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/github_reader/files/comment_li.html" beforeDir="false" afterPath="$PROJECT_DIR$/github_reader/files/comment_li.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/github_reader/files/course01.html" beforeDir="false" afterPath="$PROJECT_DIR$/github_reader/files/course1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/github_reader/files/course01_beatify_without_img_src.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/github_reader/files/course01_beatify_without_style.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/github_reader/files/course02.html" beforeDir="false" afterPath="$PROJECT_DIR$/github_reader/files/course2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/github_reader/files/course02_beatify_without_img_src.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/github_reader/files/course02_beatify_without_style.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/github_reader/files/course3_beatify_without_img_src.html" beforeDir="false" afterPath="$PROJECT_DIR$/github_reader/files/course3_beatify_without_img_src.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/github_reader/files/course3_beatify_without_style.html" beforeDir="false" afterPath="$PROJECT_DIR$/github_reader/files/course3_beatify_without_style.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/github_reader/files/course4_beatify_without_img_src.html" beforeDir="false" afterPath="$PROJECT_DIR$/github_reader/files/course4_beatify_without_img_src.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/github_reader/files/course4_beatify_without_style.html" beforeDir="false" afterPath="$PROJECT_DIR$/github_reader/files/course4_beatify_without_style.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/github_reader/files/course5_beatify_without_img_src.html" beforeDir="false" afterPath="$PROJECT_DIR$/github_reader/files/course5_beatify_without_img_src.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/github_reader/files/course5_beatify_without_style.html" beforeDir="false" afterPath="$PROJECT_DIR$/github_reader/files/course5_beatify_without_style.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/github_reader/files/geektime_java_concurrent_headers_contents.txt" beforeDir="false" afterPath="$PROJECT_DIR$/github_reader/files/geektime_java_concurrent_headers_contents.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/github_reader/files/test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/github_reader/get_geektime_comments.py" beforeDir="false" afterPath="$PROJECT_DIR$/github_reader/get_geektime_comments.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/github_reader/get_website_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/github_reader/get_website_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/github_reader/lessen_html.py" beforeDir="false" afterPath="$PROJECT_DIR$/github_reader/lessen_html.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/github_reader/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/github_reader/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,11 +15,94 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/github_reader/lessen_html.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
+            <state relative-caret-position="1960">
               <caret line="59" column="38" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/github_reader/files/course1_beatify_without_style.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/github_reader/files/course1_beatify_without_img_src.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="41160">
+              <caret line="515" column="105" lean-forward="true" selection-start-line="515" selection-start-column="18" selection-end-line="515" selection-end-column="105" />
+              <folding>
+                <element signature="n#head#0;n#html#0;n#!!top" />
+                <element signature="n#title#0;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#script#0;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#script#1;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#script#2;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#script#3;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#script#4;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#script#5;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#style#1;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#style#2;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#style#3;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#style#4;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#style#5;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#style#6;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#style#7;n#head#0;n#html#0;n#!!top" />
+                <element signature="n#script#6;n#head#0;n#html#0;n#!!top" />
+                <element signature="e#651657#653987#0" />
+                <element signature="e#651712#653974#0" />
+                <element signature="e#653991#655079#0" />
+                <element signature="e#654044#655066#0" />
+                <element signature="e#655083#655295#0" />
+                <element signature="e#655142#655282#0" />
+                <element signature="e#655299#656459#0" />
+                <element signature="e#655349#656446#0" />
+                <element signature="e#656463#657069#0" />
+                <element signature="e#656521#657056#0" />
+                <element signature="e#657073#660157#0" />
+                <element signature="e#657127#660144#0" />
+                <element signature="e#660161#662517#0" />
+                <element signature="e#660222#660941#0" />
+                <element signature="e#660946#661640#0" />
+                <element signature="e#661645#662504#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/github_reader/files/course1.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="35">
+              <caret line="1" column="62" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/github_reader/files/directly.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/github_reader/download_directly.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="31" column="57" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -56,7 +113,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/github_reader/geektime_page_lessen.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4935">
+            <state relative-caret-position="5670">
               <caret line="165" column="34" selection-start-line="165" selection-start-column="34" selection-end-line="165" selection-end-column="34" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -68,7 +125,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/github_reader/files/course2_beatify_without_img_src.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-315">
+            <state>
               <caret column="15" selection-start-column="15" selection-end-column="15" />
             </state>
           </provider>
@@ -192,7 +249,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -205,23 +261,18 @@
               <item name="geketime" type="462c0819:PsiDirectoryNode" />
               <item name="github_reader" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="geketime" type="b2602c69:ProjectViewProjectNode" />
-              <item name="geketime" type="462c0819:PsiDirectoryNode" />
-              <item name="github_reader" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="copyright" />
+    <property name="settings.editor.selected.configurable" value="preferences.toDoOptions" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -387,20 +438,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2351387" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.424581" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.95810056" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.95810056" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.48603353" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32914925" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.31005585" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.1773743" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32914925" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -428,13 +480,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/requests/api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="115" selection-start-line="115" selection-end-line="115" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/requests/utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
@@ -481,23 +526,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/github_reader/files/course01_beatify_without_style.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/github_reader/files/course02_beatify_without_style.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2450">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/github_reader/files/course02_beatify_without_img_src.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/github_reader/files/course01_beatify_without_style.html" />
+    <entry file="file://$PROJECT_DIR$/github_reader/files/course02_beatify_without_style.html" />
+    <entry file="file://$PROJECT_DIR$/github_reader/files/course02_beatify_without_img_src.html" />
     <entry file="file://$PROJECT_DIR$/github_reader/files/course4.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
@@ -594,13 +625,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/github_reader/files/course1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="1" column="57" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/geektime/get_toutiao_pictures.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -670,13 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/github_reader/files/directly.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/github_reader/files/course4_beatify_without_style.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -684,27 +701,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/github_reader/download_directly.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/github_reader/files/course01_beatify_without_img_src.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="80" column="7" lean-forward="true" selection-start-line="80" selection-start-column="7" selection-end-line="80" selection-end-column="7" />
-          <folding>
-            <element signature="n#head#0;n#html#0;n#!!top" />
-            <element signature="n#svg#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/github_reader/files/course01_beatify_without_img_src.html" />
     <entry file="file://$PROJECT_DIR$/github_reader/files/geektime_java_concurrent_headers_contents.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="35">
@@ -791,10 +788,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/github_reader/lessen_html.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1960">
+          <caret line="59" column="38" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/github_reader/geektime_page_lessen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5670">
+          <caret line="165" column="34" selection-start-line="165" selection-start-column="34" selection-end-line="165" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/github_reader/files/course2_beatify_without_img_src.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" selection-start-column="15" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/github_reader/files/course1_beatify_without_style.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/github_reader/files/course1_beatify_without_img_src.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="515" column="15" selection-start-line="515" selection-start-column="15" selection-end-line="515" selection-end-column="15" />
+        <state relative-caret-position="41160">
+          <caret line="515" column="105" lean-forward="true" selection-start-line="515" selection-start-column="18" selection-end-line="515" selection-end-column="105" />
           <folding>
             <element signature="n#head#0;n#html#0;n#!!top" />
             <element signature="n#title#0;n#head#0;n#html#0;n#!!top" />
@@ -833,27 +864,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/github_reader/files/course2_beatify_without_img_src.html">
+    <entry file="file://$PROJECT_DIR$/github_reader/files/course1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-315">
-          <caret column="15" selection-start-column="15" selection-end-column="15" />
+        <state relative-caret-position="35">
+          <caret line="1" column="62" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="62" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/github_reader/geektime_page_lessen.py">
+    <entry file="file://$PROJECT_DIR$/github_reader/files/directly.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4935">
-          <caret line="165" column="34" selection-start-line="165" selection-start-column="34" selection-end-line="165" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="210">
+          <caret line="6" column="24" lean-forward="true" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/github_reader/lessen_html.py">
+    <entry file="file://$PROJECT_DIR$/github_reader/download_directly.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="59" column="38" selection-start-line="59" selection-start-column="38" selection-end-line="59" selection-end-column="38" />
+        <state relative-caret-position="140">
+          <caret line="31" column="57" selection-start-line="31" selection-start-column="57" selection-end-line="31" selection-end-column="57" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
